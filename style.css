@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main_logo {
+    height: 50px;
+    margin-top: 20px;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #83d2ab;
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+#email_input {
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 0 10px;
+    font-size: 18px;
+    border-color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit_button {
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    /* margin-top: 20px; */
+    font-weight: 700;
+}
+
+nav {
+    margin-top: 30px;
+}
+
+nav a {
+    margin: 0 15px;
+}
+
+.social_button {
+    width: 40px;
+}
+
+#tiktok_button {
+    padding: 3px;
+}
+
+#error_text {
+    opacity: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    color: red;
+}
