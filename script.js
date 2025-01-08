@@ -34,9 +34,27 @@ document.querySelector("form").addEventListener("submit", (event) => {
     }
 })
 
-let error_text = (text) => document.querySelector("#error_text").textContent = text
+let error_text = (text) => {
+    document.querySelector("#error_text").textContent = text
+    setTimeout(() => {
+        document.querySelector("#error_text").textContent = ""
+    }, 3000)
+}
 
-let send_verify_code = (email) => {
+let send_verify_code = (email_inf) => {
     console.log("send code!")
-    console.log(email)
+    console.log(email_inf)
+    let emailData = {email: email_inf}
+    fetch('https://send-server-field-path-2.onrender.com/send_verification_code', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',  // Odesíláme JSON
+        },
+        body: JSON.stringify(emailData),  // Posíláme data jako JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Server response:', data.response_code);
+    })
+    .catch(error => console.error('Error:', error));
 }
