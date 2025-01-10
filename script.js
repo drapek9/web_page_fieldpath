@@ -24,7 +24,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
                 error_text("Invalid email structure")
             } else if (response_code === 999){
                 // send_verify_code(the_email)
-                window.location.href = "/verify_code/verify_code.html"
+                window.location.href = "/verify_code/verify_code.html?email=" + encodeURIComponent(the_email)
             } else if (response_code === 1002){
                 error_text("There is a mistake")
             }

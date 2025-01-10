@@ -2,10 +2,12 @@ document.querySelector("#ver_form").addEventListener("submit", (event) => {
     event.preventDefault()
     send_user_input_verify_code(event.target.elements.code_input.value)
 })
+const urlParams = new URLSearchParams(window.location.search)
+let email_inf = urlParams.get("email")
 
 const send_user_input_verify_code = (code) => {
-    console.log(code)
-    let email_inf = "drapalsimon.second@gmail.com"
+    // let email_inf = "drapalsimon.second@gmail.com"
+    console.log("ahoj")
     let emailData = {email: email_inf, code: Number(code)}
     fetch('https://send-server-field-path-2.onrender.com/verify_code', {
         method: 'POST',
@@ -22,6 +24,8 @@ const send_user_input_verify_code = (code) => {
             window.location.href = "/user_saved_screen/user_saved.html"
         } else if (data.response === 1921){ // špatný kód
             set_error_text("Invalid verify code")
+        } else {
+            set_error_text("Your account propably exists")
         }
     })
     .catch(error => console.error('Error:', error));
