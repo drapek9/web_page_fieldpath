@@ -24,13 +24,18 @@ h2 {
     margin-bottom: 25px;
 }
 
-#email_input {
+#email_input, #my_code_input {
     width: 350px;
     height: 35px;
     border-radius: 10px;
     padding: 0 10px;
     font-size: 18px;
     border-color: black;
+}
+
+#my_code_input {
+    letter-spacing: 15px;
+    text-align: center;
 }
 
 form {
@@ -70,4 +75,21 @@ nav a {
     margin-bottom: 3px;
     font-size: 11px;
     color: red;
+}
+
+#back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+#verified_h2 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -23,7 +23,8 @@ document.querySelector("form").addEventListener("submit", (event) => {
             } else if (response_code === 992){
                 error_text("Invalid email structure")
             } else if (response_code === 999){
-                send_verify_code(the_email)
+                // send_verify_code(the_email)
+                window.location.href = "/verify_code/verify_code.html"
             } else if (response_code === 1002){
                 error_text("There is a mistake")
             }
@@ -34,27 +35,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
     }
 })
 
-let error_text = (text) => {
+const error_text = (text) => {
     document.querySelector("#error_text").textContent = text
     setTimeout(() => {
         document.querySelector("#error_text").textContent = ""
     }, 3000)
-}
-
-let send_verify_code = (email_inf) => {
-    console.log("send code!")
-    console.log(email_inf)
-    let emailData = {email: email_inf}
-    fetch('https://send-server-field-path-2.onrender.com/send_verification_code', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',  // Odesíláme JSON
-        },
-        body: JSON.stringify(emailData),  // Posíláme data jako JSON
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Server response:', data.response_code);
-    })
-    .catch(error => console.error('Error:', error));
 }
