@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <a href="" id="back">Back</a>
+    <!-- <a href="" id="back">Back</a> -->
     <img id="main_logo" src="../images/Group 36306.png" alt="">
     <h1>FieldPath</h1>
-    <h2 id="verified_h2">You have been verified!</h2>
-    <!-- <script>
-        setTimeout(() => {
-            window.location.href = "/index.html"
-        }, 3000)
-    </script> -->
+    <img id="check_logo" src="../images/check_image.png" alt="">
+    <h2 id="verified_h2">Verified Successfully!</h2>
+    <input type="submit" value="Complete" id="submit_button">
+    <script>
+        document.querySelector("#submit_button").addEventListener("click", () => {
+           window.location.href = "/index.html"
+        })
+    </script>
 </body>
 </html>

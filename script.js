@@ -35,9 +35,14 @@ document.querySelector("form").addEventListener("submit", (event) => {
     }
 })
 
+let theTimeoutError = null
 const error_text = (text) => {
     document.querySelector("#error_text").textContent = text
-    setTimeout(() => {
+    if (theTimeoutError !== null){
+        clearTimeout(theTimeoutError)
+        theTimeoutError = null
+    }
+    theTimeoutError = setTimeout(() => {
         document.querySelector("#error_text").textContent = ""
     }, 3000)
 }

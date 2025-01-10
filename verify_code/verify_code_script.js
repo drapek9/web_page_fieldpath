@@ -7,7 +7,6 @@ let email_inf = urlParams.get("email")
 
 const send_user_input_verify_code = (code) => {
     // let email_inf = "drapalsimon.second@gmail.com"
-    console.log("ahoj")
     let emailData = {email: email_inf, code: Number(code)}
     fetch('https://send-server-field-path-2.onrender.com/verify_code', {
         method: 'POST',
@@ -27,6 +26,7 @@ const send_user_input_verify_code = (code) => {
         } else {
             set_error_text("Your account propably exists")
         }
+        console.log(data)
     })
     .catch(error => console.error('Error:', error));
 }
@@ -37,14 +37,23 @@ document.querySelector("#my_code_input").addEventListener("input", (event) => {
         event.target.value = event.target.value.slice(0, 6)
     } else if (event.target.value.length === 6) {
         document.querySelector("#submit_button").disabled = false
+        document.querySelector("#submit_button").style.backgroundColor = "black"
+        document.querySelector("#submit_button").style.borderWidth = "2px"
     } else {
         document.querySelector("#submit_button").disabled = true
+        document.querySelector("#submit_button").style.backgroundColor = "rgb(180, 180, 180)"
+        document.querySelector("#submit_button").style.borderWidth = "0"
     }
 })
 
+let theTimeoutError2 = null
 const set_error_text = (text) => {
     document.querySelector("#error_text").textContent = text
-    setTimeout(() => {
+    if (theTimeoutError2 !== null){
+        clearTimeout(theTimeoutError2)
+        theTimeoutError2 = null
+    }
+    theTimeoutError2 = setTimeout(() => {
         document.querySelector("#error_text").textContent = ""
     }, 3000)
 }
