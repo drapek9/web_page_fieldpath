@@ -1,9 +1,29 @@
 document.querySelector("#ver_form").addEventListener("submit", (event) => {
     event.preventDefault()
-    send_user_input_verify_code(event.target.elements.code_input.value)
+    if (urlParams.get("type") === "verify"){
+        send_user_input_verify_code(event.target.elements.code_input.value)
+    } else if (urlParams.get("type") === "delete"){
+        send_user_input_delete_code(event.target.elements.code_input.value)
+    }
 })
 const urlParams = new URLSearchParams(window.location.search)
 let email_inf = urlParams.get("email")
+
+const send_user_input_delete_code = (code) => {
+    console.log(email_inf)
+    fetch('https://send-server-field-path-2.onrender.com/verify_delete_code', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',  // Odesíláme JSON
+        },
+        body: JSON.stringify({"email": email_inf, "code": Number(code)}),  // Posíláme data jako JSON
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+    })
+    .catch(error => console.error('Error:', error));
+}
 
 const send_user_input_verify_code = (code) => {
     // let email_inf = "drapalsimon.second@gmail.com"
@@ -26,7 +46,6 @@ const send_user_input_verify_code = (code) => {
         } else {
             set_error_text("Your account propably exists")
         }
-        console.log(data)
     })
     .catch(error => console.error('Error:', error));
 }

@@ -8,7 +8,6 @@
     color: red;
     font-size: 11px;
     margin-top: 10px;
-    height: 12px;
 }
 
 h1 {
@@ -40,7 +39,7 @@ form input[type="text"], form input[type="password"]{
 #submit_button {
     background-color: black;
     color: white;
-    margin: 10px;
+    margin: 5px;
     padding: 4px 15px;
     border-radius: 5px;
     font-weight: 700;
