@@ -16,17 +16,23 @@ html {
 #delete_option {
     text-decoration: none;
     color: white;
-    background-color: black;
-    padding: 5px 10px;
-    font-size: 14px;
+    /* background-color: black; */
+    background-color: red;
+    padding: 7px 10px;
+    font-size: 12px;
     border-radius: 10px;
     position: absolute;
     right: 10px;
     top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
 }
 
 #delete_icon {
-    height: 20px;
+    height: 14px;
+    margin-left: 11px;
 }
 
 body {
