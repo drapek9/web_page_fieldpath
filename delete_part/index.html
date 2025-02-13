@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FieldPath</title>
     <link rel="stylesheet" href="del_styles.css">
+    <link rel="icon" href="../../images/app_logo_rel.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <a href="../index.html" id="back">Back</a>
         <img id="logo_img" src="../images/Group 36306.png" alt="">
+        <p id="name_app">FieldPath</p>
         <h1>Delete account</h1>
     </header>
     <main>
@@ -17,8 +19,9 @@
             <input id="user_email_input" placeholder="username or e-mail" type="text">
             <input id="user_password_input" placeholder="password" type="password">
             <p id="error_text"></p>
-            <input id="submit_button" type="submit">
+            <input id="submit_button" type="submit" value="Delete">
         </form>
+        <p id="warning_label">Warning: Account deletion is irreversible!<br>All your information will be permanently deleted.</p>
         
     </main>
     <script src="del_script.js"></script>

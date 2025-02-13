@@ -38,13 +38,17 @@ body {
     overflow: hidden;
 }
 
-h1 {
+#app_name {
     margin-bottom: 40px;
     font-size: 14px;
+    font-weight: 700;
+    color: black;
+
 }
 
-h2 {
+h1 {
     margin-bottom: 30px;
+    font-size: 25px;
 }
 
 #email_input, #my_code_input {
