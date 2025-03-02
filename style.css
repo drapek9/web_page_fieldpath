@@ -147,8 +147,21 @@ ul {
     transform: translate(-45%, -50%);
     list-style: none;
     display: flex;
+ul {
+    position: absolute;
+    left: 50%;
+    top: 420px;
+    transform: translate(-45%, -50%);
+    list-style: none;
+    display: flex;
 }
 
+ul li {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 ul li {
     width: 80px;
     height: 50px;
@@ -214,6 +227,10 @@ ul li {
     margin-bottom: 17.5px;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.499);
+}
+
+#business_text_contact a:hover {
+    color: white;
 }
 
 #business_text_contact a:hover {
