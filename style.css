@@ -9,6 +9,17 @@
     margin-top: 40px;
 }
 
+#menu_button {
+    position: absolute;
+    height: 35px;
+    top: 10px;
+    right: 15px;
+}
+
+#menu_button img {
+    height: 100%;
+}
+
 html {
     height: 100%;
 }
@@ -63,8 +74,9 @@ footer {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 10px;
+    top: 45px;
     right: 10px;
+    opacity: 0;
 }
 
 #root_div_a a:hover {
@@ -147,21 +159,8 @@ ul {
     transform: translate(-45%, -50%);
     list-style: none;
     display: flex;
-ul {
-    position: absolute;
-    left: 50%;
-    top: 420px;
-    transform: translate(-45%, -50%);
-    list-style: none;
-    display: flex;
 }
 
-ul li {
-    width: 80px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 ul li {
     width: 80px;
     height: 50px;
@@ -227,10 +226,6 @@ ul li {
     margin-bottom: 17.5px;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.499);
-}
-
-#business_text_contact a:hover {
-    color: white;
 }
 
 #business_text_contact a:hover {

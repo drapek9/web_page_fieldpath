@@ -1,10 +1,10 @@
 "use sctrict"
 // informace zda existuje email nebo ne
 document.querySelector("form").addEventListener("submit", (event) => {
-    event.preventDefault()
-    let the_email = event.target.elements.email_input_name.value
+    event.preventDefault();
+    let the_email = event.target.elements.email_input_name.value;
     if (the_email !== ""){
-        const emailRex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        const emailRex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (emailRex.test(the_email)){
             const emailData = { email_data: the_email };
 
@@ -18,35 +18,52 @@ document.querySelector("form").addEventListener("submit", (event) => {
             .then(response => response.json())
             .then(data => {
                 console.log('Server response:', data);
-                let response_code = data.response
-                console.log(response_code)
+                let response_code = data.response;
+                console.log(response_code);
                 if (response_code === 981){
-                    error_text("Email allready exists")
+                    error_text("Email allready exists");
                 } else if (response_code === 999){
                     // send_verify_code(the_email)
-                    window.location.href = "/verify_code/verify_code.html?type=verify&email=" + encodeURIComponent(the_email)
+                    window.location.href = "/verify_code/verify_code.html?type=verify&email=" + encodeURIComponent(the_email);
                 } else if (response_code === 1002){
-                    error_text("There is a mistake")
+                    error_text("There is a mistake");
                 }
             })
             .catch(error => console.error('Error:', error));
         } else {
-            error_text("Invalid email structure")
-            console.log("here")
+            error_text("Invalid email structure");
+            console.log("here");
         }
     } else {
-        error_text("Enter your email!")
+        error_text("Enter your email!");
     }
-})
+});
 
-let theTimeoutError = null
+let theTimeoutError = null;
 const error_text = (text) => {
-    document.querySelector("#error_text").textContent = text
+    document.querySelector("#error_text").textContent = text;
     if (theTimeoutError !== null){
-        clearTimeout(theTimeoutError)
-        theTimeoutError = null
+        clearTimeout(theTimeoutError);
+        theTimeoutError = null;
     }
     theTimeoutError = setTimeout(() => {
-        document.querySelector("#error_text").textContent = ""
-    }, 3000)
+        document.querySelector("#error_text").textContent = "";
+    }, 3000);
 }
+
+// menu //
+
+document.querySelector("#menu_button").addEventListener("click", (event) => {
+    event.preventDefault();
+
+    let theDiv = document.querySelector("#root_div_a");
+
+    let theOpacity = getComputedStyle(theDiv).opacity;
+
+    if (theOpacity == 1) {
+        theDiv.style.opacity = 0;
+    } else {
+        theDiv.style.opacity = 1;
+    }
+    
+});
