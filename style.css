@@ -40,7 +40,7 @@ footer {
 #delete_option, .contact_us_option {
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
+    padding: 4px 10px;
     font-size: 9px;
     border-radius: 10px;
     font-weight: 700;
@@ -48,10 +48,10 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    line-height: 16px;
 }
 
 #delete_option {
-    align-items: center;
     background-color: red;
 }
 
@@ -67,8 +67,21 @@ footer {
     right: 10px;
 }
 
+#root_div_a a:hover {
+    height: 25px;
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.153);
+}
 #root_div_a a {
-    margin-bottom: 7.5px;
+    height: 24px;
+    transition: height 0.175s ease, box-shadow 0.175s ease;
+}
+
+#root_div_a div {
+    height: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .icon_root {
@@ -127,16 +140,30 @@ form {
     font-weight: 700;
 }
 
-nav {
-    margin-top: 70px;
+ul {
+    position: absolute;
+    left: 50%;
+    top: 420px;
+    transform: translate(-45%, -50%);
+    list-style: none;
+    display: flex;
 }
 
-nav a {
-    margin: 0 20px;
+ul li {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social_button {
     width: 40px;
+    transition: 0.175s;
+}
+
+.social_button:hover {
+    width: 42.5px;
 }
 
 #tiktok_button {
@@ -183,15 +210,12 @@ nav a {
     }
 }
 
-nav {
-    position: absolute;
-    left: 50%;
-    top: 350px;
-    transform: translate(-45%, -50%);
-}
-
 #check_text {
     margin-bottom: 17.5px;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.499);
+}
+
+#business_text_contact a:hover {
+    color: white;
 }
