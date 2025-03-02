@@ -10,14 +10,21 @@
     <link rel="icon" href="../../images/app_logo_rel.png" type="image/x-icon">
 </head>
 <body>
-    <img id="main_logo" src="../../images/Group 36306.png" alt="">
-    <p id="app_name">FieldPath</p>
-    <img id="check_logo" src="../../images/check_image.png" alt="">
-    <!-- <h1>Account successfully deleted</h1> -->
-     <h1>Successfully deleted!</h1>
-    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum pariatur voluptatibus distinctio unde tempore ducimus saepe quis.</p> -->
-    <input type="submit" value="Back to Main Page" id="submit_button">
+    <header></header>
+    <main>
+        <img id="main_logo" src="../../images/Group 36306.png" alt="">
+        <p id="app_name">FieldPath</p>
+        <img id="check_logo" src="../../images/check_image.png" alt="">
+        <!-- <h1>Account successfully deleted</h1> -->
+        <h1>Successfully deleted!</h1>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic laborum pariatur voluptatibus distinctio unde tempore ducimus saepe quis.</p> -->
+        <input type="submit" value="Back to Main Page" id="submit_button">
+    </main>
+    <footer>
+        <p style="color: white; font-size: 9px;">© Copyright <span id="year"></span> FieldPath</p>
+    </footer>
     <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
         document.querySelector("#submit_button").addEventListener("click", () => {
            window.location.href = "/index.html"
         })

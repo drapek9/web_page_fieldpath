@@ -12,7 +12,7 @@
         <a id="menu_button" href=""><img src="images/menu.png" alt=""></a>
         <div id="root_div_a">
             <div>
-                <a style="color: red;" id="delete_option" href="delete_part/index.html">Delete account <img class="icon_root" src="images/del_user_red.png" alt=""></a>
+                <a style="color: red;" id="delete_option" href="delete_part/index.html">Delete Account <img class="icon_root" src="images/del_user_red.png" alt=""></a>
             </div>
             <hr>
             <div>
@@ -20,7 +20,7 @@
             </div>
             <hr>
             <div>
-               <a class="contact_us_option" href="https://www.iubenda.com/privacy-policy/53083407">Privacy & Policy</a> 
+               <a class="contact_us_option" href="https://www.iubenda.com/privacy-policy/53083407">Privacy Policy</a> 
             </div>
         </div>
         
@@ -45,8 +45,13 @@
             <p>Partner with us:</p>
             <a href="mailto:business@fieldpathapp.com">business@fieldpathapp.com</a>
         </div>
+        <p style="color: white; font-size: 9px;">© Copyright <span id="year"></span> FieldPath</p>
         
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <script src="script.js"></script>
 </body>

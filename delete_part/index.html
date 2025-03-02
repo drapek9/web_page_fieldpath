@@ -10,11 +10,11 @@
 <body>
     <header>
         <a href="../index.html" id="back">Back</a>
+    </header>
+    <main>
         <img id="logo_img" src="../images/Group 36306.png" alt="">
         <p id="name_app">FieldPath</p>
         <h1>Delete account</h1>
-    </header>
-    <main>
         <form action="">
             <input id="user_email_input" placeholder="username or e-mail" type="text">
             <input id="user_password_input" placeholder="password" type="password">
@@ -24,6 +24,12 @@
         <p id="warning_label">Warning: Account deletion is irreversible!<br>All your information will be permanently deleted.</p>
         
     </main>
+    <footer>
+        <p style="color: white; font-size: 9px;">© Copyright <span id="year"></span> FieldPath</p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <script src="del_script.js"></script>
 </body>
 </html>
