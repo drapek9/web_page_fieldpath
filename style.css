@@ -13,25 +13,66 @@ html {
     height: 100%;
 }
 
-#delete_option {
-    text-decoration: none;
-    color: white;
-    /* background-color: black; */
-    background-color: red;
-    padding: 7px 10px;
-    font-size: 12px;
-    border-radius: 10px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
+#business_text_contact {
+    color: rgba(255, 255, 255, 0.196);
+    font-weight: 100;
+    font-size: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    font-weight: 700;
+    margin: 0 auto;
 }
 
-#delete_icon {
-    height: 14px;
+footer {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 15px;
+    width: 100%;
+    display: flex;
+}
+
+
+#business_text_contact a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.196);
+}
+
+#delete_option, .contact_us_option {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 9px;
+    border-radius: 10px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#delete_option {
+    align-items: center;
+    background-color: red;
+}
+
+.contact_us_option {
+    background-color: black;
+}
+
+#root_div_a {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10px;
+    right: 10px;
+}
+
+#root_div_a a {
+    margin-bottom: 7.5px;
+}
+
+.icon_root {
+    height: 12px;
     margin-left: 11px;
 }
 
