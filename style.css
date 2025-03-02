@@ -67,8 +67,16 @@ footer {
     right: 10px;
 }
 
-#root_div_a a {
-    margin-bottom: 7.5px;
+#root_div_a a:hover {
+    height: 24px;
+}
+
+#root_div_a div {
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
 }
 
 .icon_root {
@@ -127,16 +135,30 @@ form {
     font-weight: 700;
 }
 
-nav {
-    margin-top: 70px;
+ul {
+    position: absolute;
+    left: 50%;
+    top: 420px;
+    transform: translate(-45%, -50%);
+    list-style: none;
+    display: flex;
 }
 
-nav a {
-    margin: 0 20px;
+ul li {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .social_button {
     width: 40px;
+    transition: 0.4s;
+}
+
+.social_button:hover {
+    width: 42.5px;
 }
 
 #tiktok_button {
@@ -183,15 +205,12 @@ nav a {
     }
 }
 
-nav {
-    position: absolute;
-    left: 50%;
-    top: 350px;
-    transform: translate(-45%, -50%);
-}
-
 #check_text {
     margin-bottom: 17.5px;
     font-size: 11px;
     color: rgba(0, 0, 0, 0.499);
+}
+
+#business_text_contact a:hover {
+    color: white;
 }
