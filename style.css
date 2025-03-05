@@ -30,7 +30,7 @@ html {
 }
 
 #business_text_contact {
-    color: rgba(255, 255, 255, 0.196);
+    color: rgba(255, 255, 255, 0.307);
     font-weight: 100;
     font-size: 8px;
     display: flex;
@@ -54,7 +54,7 @@ footer {
 
 #business_text_contact a {
     margin-top: 2px;
-    color: rgba(255, 255, 255, 0.196);
+    color: rgba(255, 255, 255, 0.307);
 }
 
 #business_text_contact a:hover {
