@@ -220,10 +220,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #83d2ab, rgb(0, 0, 0));
     background-attachment: fixed;
-
-    /* min-height: 100vh; */
-    /* height: 100%; */
-    /* overflow: hidden; */
 }
 
 #app_name {
@@ -277,7 +273,7 @@ ul {
     align-items: center;
 }
 
-ul li {
+.social_ul li {
     width: 80px;
     height: 50px;
     display: flex;
@@ -285,7 +281,7 @@ ul li {
     align-items: center;
 }
 
-ul li a {
+.social_ul li a {
     height: 100%;
     display: flex;
     align-items: center;
@@ -373,12 +369,6 @@ ul li a {
 }
 
 /* section functions */
-.information_function_type{
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin-top: 100px;
-}
 
 .mobile_div {
     flex: 2;
@@ -395,12 +385,10 @@ ul li a {
 
 .mobile_article img {
     width: 100%;
-    border-radius: 25px;
 }
 
 .mobile_multiple_article img {
     width: 100%;
-    border-radius: 25px;
 }
 
 .mobile_article_content {
@@ -413,7 +401,26 @@ ul li a {
 }
 
 .mobile_article_content h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.mobile_article_content p {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.821);
+}
+
+.mobile_article_content ul{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    transform: translateX(90%);
+    width: 50%;
+}
+
+.mobile_article_content ul li{
+    list-style-type: disc;
+    font-size: 14px;
+    text-align: left;
 }
 
 .events_div_photos {
@@ -425,14 +432,18 @@ ul li a {
 }
 
 .mobile_multiple_article {
-    position: absolute;
-    width: 35%;
+    position: relative;
+    /* width: 35%; */
+    /* height: 100%; */
+    /* margin: auto 0; */
 }
 
 .events_div_photos {
     position: relative;
-    /* width: 800px; */
-    height: 300px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+
 }
 
 .mobile_multiple_article:nth-child(2){
@@ -447,3 +458,24 @@ ul li a {
     transform: rotate(5deg);
     right: 50px;
 }
+
+/* limit graficka vlastnost */
+.limit_border {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#section_div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+}
+
+.information_function_type{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 20px;
+    flex: 1;
+}
+
