@@ -9,6 +9,89 @@
     margin-top: 7.5px;
 }
 
+#tutorial_card {
+    width: 325px;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 70px;
+    text-decoration: none;
+    transition: 0.5s;
+    /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.383);
+}
+
+#picture_tutorial_card {
+    width: 75%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+}
+
+#picture_tutorial_card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Černý overlay s 50% průhledností */
+    transition: 0.5s;
+}
+
+#tutorial_card:hover #picture_tutorial_card::before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#tutorial_card:hover #picture_tutorial_card article {
+    opacity: 0;
+}
+
+#tutorial_card div {
+    height: 100%;
+}
+
+#picture_tutorial_card article {
+    position: relative;
+    height: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    transition: 0.5s;
+    opacity: .9;
+}
+
+#picture_tutorial_card article img {
+    height: 100%;
+}
+
+#tutorial_card h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+#tutorial_card p {
+    font-size: 10px;
+    color: rgb(139, 139, 139);
+}
+
+#content_tutorial_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+#tutorial_card div img {
+    height: 100%;
+}
+
 #menu_button {
     height: 30px;
     margin-right: 10px;
