@@ -15,12 +15,19 @@
     background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+    margin: 70px auto 100px auto;
     margin-top: 70px;
+
     text-decoration: none;
     transition: 0.5s;
-    /* box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); */
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.383);
+    border-radius: 11px;
+}
+
+#slogan {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 20px;
 }
 
 #picture_tutorial_card {
@@ -30,6 +37,7 @@
     background-position: center;
     position: relative;
     display: flex;
+    border-radius: 10px 0 0 10px;
 }
 
 #picture_tutorial_card::before{
@@ -41,6 +49,8 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* Černý overlay s 50% průhledností */
     transition: 0.5s;
+    border-radius: 10px 0 0 10px;
+
 }
 
 #tutorial_card:hover #picture_tutorial_card::before {
@@ -118,20 +128,17 @@ html {
     font-size: 8px;
     display: flex;
     flex-direction: column;
-    margin: 0 auto 7.5px auto;
-    left: 10px;
-    bottom: 8px;
-    position: absolute;
     align-items: start;
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    padding-bottom: 15px;
+    padding-bottom: 7.5px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 100px;
 }
 
 
@@ -212,8 +219,11 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #83d2ab, rgb(0, 0, 0));
-    min-height: 100vh;
-    overflow: hidden;
+    background-attachment: fixed;
+
+    /* min-height: 100vh; */
+    /* height: 100%; */
+    /* overflow: hidden; */
 }
 
 #app_name {
@@ -360,4 +370,80 @@ ul li a {
     #get_the_app_button {
         width: 500px;
     }
+}
+
+/* section functions */
+.information_function_type{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 100px;
+}
+
+.mobile_div {
+    flex: 2;
+}
+
+.mobile_div_content {
+    flex: 3;
+}
+
+.mobile_article {
+    /* width: 100%; */
+    margin: 0 25%;
+}
+
+.mobile_article img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.mobile_multiple_article img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+.mobile_article_content {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    height: 100%;
+    padding: 0 30px;
+    padding-top: 15%;
+}
+
+.mobile_article_content h2 {
+    margin-bottom: 30px;
+}
+
+.events_div_photos {
+    display: flex;
+    flex-direction: row;
+    line-height: 100%;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.mobile_multiple_article {
+    position: absolute;
+    width: 35%;
+}
+
+.events_div_photos {
+    position: relative;
+    /* width: 800px; */
+    height: 300px;
+}
+
+.mobile_multiple_article:nth-child(2){
+    z-index: 2;
+}
+
+.mobile_multiple_article:first-child {
+    transform: rotate(-5deg);
+    left: 50px;
+}
+.mobile_multiple_article:last-child {
+    transform: rotate(5deg);
+    right: 50px;
 }
