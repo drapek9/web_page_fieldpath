@@ -17,7 +17,6 @@
     flex-direction: row;
     margin: 70px auto 100px auto;
     margin-top: 70px;
-
     text-decoration: none;
     transition: 0.5s;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.383);
@@ -26,8 +25,8 @@
 
 #slogan {
     font-weight: bold;
-    margin-bottom: 40px;
-    font-size: 20px;
+    margin: 0 15px 40px 15px;
+    font-size: 26px;
 }
 
 #picture_tutorial_card {
@@ -122,32 +121,20 @@ html {
     height: 100%;
 }
 
-#business_text_contact {
-    color: rgba(255, 255, 255, 0.386);
+.business_text_contact {
+    /* color: rgba(255, 255, 255, 0.386); */
+    color: white;
     font-weight: 100;
-    font-size: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-footer {
-    padding-bottom: 7.5px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 100px;
+    font-size: 10px;
 }
 
 
-#business_text_contact a {
+.business_text_contact a {
     margin-top: 2px;
-    color: rgba(255, 255, 255, 0.429);
+    color: white;
 }
 
-#business_text_contact a:hover {
+.business_text_contact a:hover {
     color: white;
 }
 
@@ -458,6 +445,88 @@ ul {
     flex: 1;
 }
 
+.get_the_app_div {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.get_the_app_div article {
+    height: 100%;
+    display: flex;
+}
+
+.text_where_avaiable {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.get_where_text {
+    font-size: 9px;
+    color: rgba(0, 0, 0, 0.533);
+}
+.the_platform_get {
+    font-size: 16px;
+}
+
+/* footer */
+
+footer {
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    background-color: #1c422f;
+    height: 150px;
+    color: black;
+}
+
+#main_footer_div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer_part h3 {
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.footer_part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.footer_part div {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+    align-items: start;
+    justify-content: center;
+}
+
+
+.footer_part a {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    margin-bottom: 3px;
+}
+
 @media(max-width: 450px){
     #email_input, #my_code_input {
         width: 250px;
@@ -506,31 +575,22 @@ ul {
     .get_the_app_button {
         margin-bottom: 15px;
     }
-}
 
-.get_the_app_div {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: space-evenly;
-}
+    #main_footer_div {
+        flex-direction: column;
+        align-items: start;
+        padding: 0 10%;
+    }
 
-.get_the_app_div article {
-    height: 100%;
-    display: flex;
-}
+    .footer_part {
+        margin-bottom: 15px;
+    }
 
-.text_where_avaiable {
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    justify-content: center;
-}
+    .footer_part:first-child {
+        order: 3;
+    }
 
-.get_where_text {
-    font-size: 9px;
-    color: rgba(0, 0, 0, 0.533);
-}
-.the_platform_get {
-    font-size: 16px;
+    footer {
+        height: 250px;
+    }
 }
