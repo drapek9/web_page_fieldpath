@@ -29,6 +29,10 @@
     font-size: 26px;
 }
 
+strong {
+    font-weight: 500;
+}
+
 #picture_tutorial_card {
     width: 75%;
     height: 100%;
