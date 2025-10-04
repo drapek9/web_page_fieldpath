@@ -121,10 +121,6 @@ header {
     height: 50px;
 }
 
-html {
-    height: 100%;
-}
-
 .business_text_contact {
     /* color: rgba(255, 255, 255, 0.386); */
     color: white;

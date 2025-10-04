@@ -6,67 +6,58 @@
     <title>FieldPath - Track Your Football Progress</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/app_logo_rel.png" type="image/x-icon">
-    <meta name="description" content="Have you ever wanted to see all your football stats in one place? If so, FieldPath is the app for you! Track your performance, compare yourself with friends and teammates, and take your game to the next level with detailed information on goals, assists, matches, and more.">
+    <meta name="description" data-cs="Chtěli jste někdy vidět všechny své fotbalové statistiky na jednom místě? Pokud ano, FieldPath je aplikace pro vás! Sledujte svůj výkon, porovnejte se s přáteli a spoluhráči a posuňte svou hru na další úroveň s podrobnými informacemi o gólech, asistencích, zápasech a dalších." 
+          data-en="Have you ever wanted to see all your football stats in one place? If so, FieldPath is the app for you! Track your performance, compare yourself with friends and teammates, and take your game to the next level with detailed information on goals, assists, matches, and more.">
 </head>
 <body>
     <header>
         <a id="menu_button" href=""><img src="images/menu.png" alt="Menu"></a>
         <div id="root_div_a">
             <div>
-                <a style="color: red;" id="delete_option" href="delete_part/index.html">Delete Account <img class="icon_root" src="images/del_user_red.png" alt="Delete image"></a>
+               <a class="contact_us_option" href="mailto:support@fieldpathapp.com" data-cs="Podpora" data-en="Support">
+                   Support <img class="icon_root" src="images/question_mark.png" alt="Support image">
+               </a> 
             </div>
             <hr>
             <div>
-               <a class="contact_us_option" href="mailto:support@fieldpathapp.com">Support <img class="icon_root" src="images/question_mark.png" alt="Support image"></a> 
+               <a class="contact_us_option" href="https://www.iubenda.com/privacy-policy/53083407" data-cs="Zásady ochrany osobních údajů" data-en="Privacy Policy">Privacy Policy</a> 
             </div>
             <hr>
             <div>
-               <a class="contact_us_option" href="https://www.iubenda.com/privacy-policy/53083407">Privacy Policy</a> 
-            </div>
-            <hr>
-            <div>
-               <a class="contact_us_option" href="terms_of_use/index.html">Terms of use</a> 
+               <a class="contact_us_option" href="terms_of_use/index.html" data-cs="Podmínky použití" data-en="Terms of use">Terms of use</a> 
             </div>
         </div>
     </header>
     <main>
         <img id="main_logo" src="images/Group 36306.png" alt="App logo">
         <p id="app_name">FieldPath</p>
-        <h1 id="slogan">Track Your Football Progress.<br>Compete with Friends.</h1>
+        
+        <h1 id="slogan">
+            <span data-cs="Sledujte svůj fotbalový pokrok." data-en="Track Your Football Progress.">Track Your Football Progress.</span>
+            <br>
+            <span data-cs="Soutěžte s přáteli." data-en="Compete with Friends.">Compete with Friends.</span>
+        </h1>
 
         <div class="get_the_app_div_main">
-            <a class="get_the_app_button" href="">
+            <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us">
                 <div class="get_the_app_div">
                     <article><img src="images/google_play_en.png" alt=""></article>
                 </div>
             </a>
-            <a class="get_the_app_button" href="">
+            <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612">
                 <div class="get_the_app_div">
                     <article><img src="images/app_store_en.png" alt=""></article>
                 </div>
             </a>
         </div>
-        
 
         <ul class="social_ul">
             <li><a href="https://www.instagram.com/fieldpathapp/"><img src="images/instagram_button.png" alt="instagram" class="social_button"></a></li>
-            <li><a href="https://www.tiktok.com/@fieldpath.app"><img src="images/tiktok_button.png" alt="tiktok" class="social_button" id="tiktok_button"></a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61574924703757"><img src="images/facebook_button.png" alt="facebook" class="social_button" id="tiktok_button"></a></li>
-            <li><a href="https://www.youtube.com/@FieldPathApp/"><img src="images/youtube_button.png" alt="youtube" class="social_button" id="tiktok_button"></a></li>
+            <li><a href="https://www.tiktok.com/@fieldpath.app"><img src="images/tiktok_button.png" alt="tiktok" class="social_button"></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61574924703757"><img src="images/facebook_button.png" alt="facebook" class="social_button"></a></li>
+            <li><a href="https://www.youtube.com/@FieldPathApp/"><img src="images/youtube_button.png" alt="youtube" class="social_button"></a></li>
         </ul>
 
-        <a id="tutorial_card" href="https://www.youtube.com/watch?v=x1BRG8G7b-M" target="_blank">
-            <div id="picture_tutorial_card" style="background-image: url(images/fieldpath_tutorial_img.jpg);">
-                <article>
-                    <img src="images/play_white.png" alt="Play video image">
-                </article>
-                
-            </div>
-            <div id="content_tutorial_card">
-                <h3>Take a tour</h3>
-                <p>Explore the key features of our app and see how easy it is to use.</p>
-            </div>
-        </a>
         <div id="section_div">
             <section class="information_function_type limit_border">
                 <div class="mobile_div events_div_photos">
@@ -82,17 +73,23 @@
                 </div>
                 <div class="mobile_div_content">
                     <article class="mobile_article_content multiple_mobile_article_content">
-                        <h2>Be Rated Like a Pro!</h2>
-                        <p>Each month, your performance is evaluated, and you receive an individual rating. Track your progress, improve your rating, and take your game to the next level!</p>
+                        <h2 data-cs="Buď hodnocen jako profesionál!" data-en="Be Rated Like a Pro!">Be Rated Like a Pro!</h2>
+                        <p data-cs="Každý měsíc se vaše výkony hodnotí a získáte individuální hodnocení. Sledujte svůj pokrok, zlepšujte své hodnocení a posuňte svou hru na další úroveň!"
+                           data-en="Each month, your performance is evaluated, and you receive an individual rating. Track your progress, improve your rating, and take your game to the next level!">
+                           Each month, your performance is evaluated, and you receive an individual rating. Track your progress, improve your rating, and take your game to the next level!
+                        </p>
                     </article>
                 </div>
             </section>
-    
+
             <section class="information_function_type limit_border">
                 <div class="mobile_div_content">
                     <article class="mobile_article_content">
-                        <h2>Compare With Friends</h2>
-                        <p>Check your stats and compare them with your friends. Who has the best overall performance? Track your progress and see how you stack up against others!</p>
+                        <h2 data-cs="Porovnejte se s přáteli" data-en="Compare With Friends">Compare With Friends</h2>
+                        <p data-cs="Sledujte své statistiky a porovnejte je s přáteli. Kdo má nejlepší celkový výkon? Sledujte svůj pokrok a zjistěte, jak si stojíte oproti ostatním!"
+                           data-en="Check your stats and compare them with your friends. Who has the best overall performance? Track your progress and see how you stack up against others!">
+                           Check your stats and compare them with your friends. Who has the best overall performance? Track your progress and see how you stack up against others!
+                        </p>
                     </article>
                 </div>
                 <div class="mobile_div">
@@ -101,6 +98,7 @@
                     </article>
                 </div>
             </section>
+
             <section class="information_function_type limit_border">
                 <div class="mobile_div">
                     <article class="mobile_article">
@@ -109,29 +107,35 @@
                 </div>
                 <div class="mobile_div_content">
                     <article class="mobile_article_content">
-                        <h2>Your Detail Stats In One Place</h2>
-                        <p>Track every aspect of your game and get a complete overview of your performance. See where you can improve and take your game to the next level!</p>
+                        <h2 data-cs="Vaše detailní statistiky na jednom místě" data-en="Your Detail Stats In One Place">Your Detail Stats In One Place</h2>
+                        <p data-cs="Sledujte každý aspekt své hry a získejte kompletní přehled o svém výkonu. Podívejte se, kde se můžete zlepšit a posuňte svou hru na další úroveň!"
+                           data-en="Track every aspect of your game and get a complete overview of your performance. See where you can improve and take your game to the next level!">
+                           Track every aspect of your game and get a complete overview of your performance. See where you can improve and take your game to the next level!
+                        </p>
                         <ul>
-
-                            <li><strong>Form</strong></li>
-                            <li><strong>Matches</strong></li>
-                            <li><strong>Goals</strong></li>
-                            <li><strong>Assists</strong></li>
-                            <li><strong>Trainings</strong></li>
-                            <li><strong>Statistics</strong></li>
+                            <li data-cs="Forma" data-en="Form"><strong>Form</strong></li>
+                            <li data-cs="Zápasy" data-en="Matches"><strong>Matches</strong></li>
+                            <li data-cs="Góly" data-en="Goals"><strong>Goals</strong></li>
+                            <li data-cs="Asistence" data-en="Assists"><strong>Assists</strong></li>
+                            <li data-cs="Tréninky" data-en="Trainings"><strong>Trainings</strong></li>
+                            <li data-cs="Statistiky" data-en="Statistics"><strong>Statistics</strong></li>
                         </ul>
                     </article>
                 </div>
             </section>
+
             <section class="information_function_type limit_border">
                 <div class="mobile_div_content">
                     <article class="mobile_article_content multiple_mobile_article_content">
-                        <h2>Add Your Activities</h2>
-                        <p>Keep track of all your activities in one place - add your matches, training sessions, and individual workouts to get a complete overview of your progress.</p>
+                        <h2 data-cs="Přidejte své aktivity" data-en="Add Your Activities">Add Your Activities</h2>
+                        <p data-cs="Sledujte všechny své aktivity na jednom místě – přidejte zápasy, tréninky a individuální cvičení pro kompletní přehled svého pokroku."
+                           data-en="Keep track of all your activities in one place - add your matches, training sessions, and individual workouts to get a complete overview of your progress.">
+                           Keep track of all your activities in one place - add your matches, training sessions, and individual workouts to get a complete overview of your progress.
+                        </p>
                         <ul>
-                            <li><strong>Match</strong></li>
-                            <li><strong>Training</strong></li>
-                            <li><strong>Ind. Training</strong> - <span style="font-size: 11px; color: rgba(255, 255, 255, 0.789);">Football, Running, Fitness or Other</span></li>
+                            <li data-cs="Zápas" data-en="Match"><strong>Match</strong></li>
+                            <li data-cs="Trénink" data-en="Training"><strong>Training</strong></li>
+                            <li data-cs="Ind. trénink" data-en="Ind. Training"><strong>Ind. Training</strong> - <span style="font-size: 11px; color: rgba(255, 255, 255, 0.789);" data-cs="Fotbal, běh, fitness nebo jiné" data-en="Football, Running, Fitness or Other">Football, Running, Fitness or Other</span></li>
                         </ul>
                     </article>
                 </div>
@@ -149,66 +153,66 @@
             </section>
     
             <section class="information_function_type limit_border">
-                <div class="mobile_div">
-                    <article class="mobile_article">
-                        <img src="mobile_imgs/calendar_mobile.png" alt="football calendar">
-                    </article>
-                </div>
-                <div class="mobile_div_content">
-                    <article class="mobile_article_content">
-                        <h2>Build Your Football Calendar</h2>
-                        <p>Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.</p>
-                    </article>
-                </div>
-            </section>
-        </div>
-        
+    <div class="mobile_div">
+        <article class="mobile_article">
+            <img src="mobile_imgs/calendar_mobile.png" alt="football calendar">
+        </article>
+    </div>
+    <div class="mobile_div_content">
+        <article class="mobile_article_content">
+            <h2 data-cs="Vytvořte svůj fotbalový kalendář" data-en="Build Your Football Calendar">Build Your Football Calendar</h2>
+            <p data-cs="Sledujte svou fotbalovou cestu. Zaznamenávejte zápasy, tréninky a individuální cvičení, abyste vytvořili historii aktivit. Sledujte svůj stav kondice – mějte přehled o zraněních, regeneraci a kdy jste plně fit."
+               data-en="Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.">
+               Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.
+            </p>
+        </article>
+    </div>
+</section>
+</div> <!-- konec section_div -->
 
-    </main>
-    <footer>
-        <div id="main_footer_div">
-            <div class="footer_part">
-                <!-- <p class="business_text_contact">Partner with us: <a href="mailto:business@fieldpathapp.com">business@fieldpathapp.com</a></p>    -->
-                <article>
-                    <h3>Partner with Us</h3>
-                    <div>
-                        <a href="mailto:business@fieldpathapp.com">business@fieldpathapp.com</a>
-                        <p>+420 774 564 728</p>
-                    </div>
-                </article>
-            </div>
+</main>
 
-
-            <div class="footer_part">
-                <article>
-                    <h3>Social Media</h3>
-                    <div>
-                        <a href="https://www.instagram.com/fieldpathapp/">Instagram</a>
-                        <a href="https://www.tiktok.com/@fieldpath.app">TikTok</a>
-                        <a href="https://www.facebook.com/profile.php?id=61574924703757">Facebook</a>
-                        <a href="https://www.youtube.com/@FieldPathApp/">YouTube</a>
-                    </div>
-                </article>
-                
-            </div>
-
-            <div class="footer_part">
-                <h3>FieldPath</h3>
+<footer>
+    <div id="main_footer_div">
+        <div class="footer_part">
+            <article>
+                <h3 data-cs="Spolupracujte s námi" data-en="Partner with Us">Partner with Us</h3>
                 <div>
-                    <a href="https://www.iubenda.com/privacy-policy/53083407">Privacy Policy</a>
-                    <a href="terms_of_use/index.html">Terms of Use</a>
-                    <a href="mailto:support@fieldpathapp.com">Support</a>
+                    <a href="mailto:business@fieldpathapp.com">business@fieldpathapp.com</a>
+                    <p>+420 774 564 728</p>
                 </div>
+            </article>
+        </div>
+
+        <div class="footer_part">
+            <article>
+                <h3 data-cs="Sociální sítě" data-en="Social Media">Social Media</h3>
+                <div>
+                    <a href="https://www.instagram.com/fieldpathapp/" data-cs="Instagram" data-en="Instagram">Instagram</a>
+                    <a href="https://www.tiktok.com/@fieldpath.app" data-cs="TikTok" data-en="TikTok">TikTok</a>
+                    <a href="https://www.facebook.com/profile.php?id=61574924703757" data-cs="Facebook" data-en="Facebook">Facebook</a>
+                    <a href="https://www.youtube.com/@FieldPathApp/" data-cs="YouTube" data-en="YouTube">YouTube</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="footer_part">
+            <h3 data-cs="FieldPath" data-en="FieldPath">FieldPath</h3>
+            <div>
+                <a href="https://www.iubenda.com/privacy-policy/53083407" data-cs="Zásady ochrany osobních údajů" data-en="Privacy Policy">Privacy Policy</a>
+                <a href="terms_of_use/index.html" data-cs="Podmínky použití" data-en="Terms of Use">Terms of Use</a>
+                <a href="mailto:support@fieldpathapp.com" data-cs="Podpora" data-en="Support">Support</a>
             </div>
         </div>
-        
-        <p style="color: white; font-size: 9px;padding-top: 20px;">© Copyright <span id="year"></span> FieldPath</p>
-    </footer>
+    </div>
 
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <p style="color: white; font-size: 9px; padding-top: 20px;">© <span id="year"></span> FieldPath</p>
+</footer>
 
-    <script src="script.js"></script>
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
