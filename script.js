@@ -35,3 +35,44 @@ document.querySelector("#menu_button").addEventListener("click", (event) => {
     }
     
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".value");
+    const duration = 1500; // celková doba animace v ms
+
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        let start = 0;
+        const stepTime = 16; // cca 60fps
+        const increment = target / (duration / stepTime);
+
+        const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+                counter.textContent = target.toLocaleString() + "+";
+                clearInterval(timer);
+            } else {
+                counter.textContent = Math.floor(start).toLocaleString() + "+";
+            }
+        }, stepTime);
+    });
+
+    // Scroll animations for sections
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements that should animate
+    const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .get_the_app_button, .social_ul li, .app_user_stats, .content_stats > div');
+    animateElements.forEach(el => observer.observe(el));
+});

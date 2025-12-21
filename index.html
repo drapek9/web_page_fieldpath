@@ -8,6 +8,25 @@
     <link rel="icon" href="images/app_logo_rel.png" type="image/x-icon">
     <meta name="description" data-cs="Chtěli jste někdy vidět všechny své fotbalové statistiky na jednom místě? Pokud ano, FieldPath je aplikace pro vás! Sledujte svůj výkon, porovnejte se s přáteli a spoluhráči a posuňte svou hru na další úroveň s podrobnými informacemi o gólech, asistencích, zápasech a dalších." 
           data-en="Have you ever wanted to see all your football stats in one place? If so, FieldPath is the app for you! Track your performance, compare yourself with friends and teammates, and take your game to the next level with detailed information on goals, assists, matches, and more.">
+    <script type="module">
+        console.log("no joooo 1")
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuXBaUF4bEy6-guRNI1Sh6uuuYUp7QW9c",
+            authDomain: "fieldpath-website.firebaseapp.com",
+            projectId: "fieldpath-website",
+            storageBucket: "fieldpath-website.firebasestorage.app",
+            messagingSenderId: "540797885152",
+            appId: "1:540797885152:web:a148d375ed9762e6b28e85",
+            measurementId: "G-QTZZXHG8FJ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </head>
 <body>
     <header>
@@ -33,9 +52,9 @@
         <p id="app_name">FieldPath</p>
         
         <h1 id="slogan">
-            <span data-cs="Sledujte svůj fotbalový pokrok." data-en="Track Your Football Progress.">Track Your Football Progress.</span>
+            <span data-cs="Sleduj svůj fotbalový pokrok." data-en="Track Your Football Progress.">Track Your Football Progress.</span>
             <br>
-            <span data-cs="Soutěžte s přáteli." data-en="Compete with Friends.">Compete with Friends.</span>
+            <span data-cs="Soutěž s přáteli." data-en="Compete with Friends.">Compete with Friends.</span>
         </h1>
 
         <div class="get_the_app_div_main">
@@ -52,11 +71,33 @@
         </div>
 
         <ul class="social_ul">
-            <li><a href="https://www.instagram.com/fieldpathapp/"><img src="images/instagram_button.png" alt="instagram" class="social_button"></a></li>
-            <li><a href="https://www.tiktok.com/@fieldpath.app"><img src="images/tiktok_button.png" alt="tiktok" class="social_button"></a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61574924703757"><img src="images/facebook_button.png" alt="facebook" class="social_button"></a></li>
-            <li><a href="https://www.youtube.com/@FieldPathApp/"><img src="images/youtube_button.png" alt="youtube" class="social_button"></a></li>
+            <li><a href="https://www.instagram.com/fieldpathapp/" target="_blank"><img src="images/instagram_button.png" alt="instagram" class="social_button"></a></li>
+            <li><a href="https://www.tiktok.com/@fieldpath.app" target="_blank"><img src="images/tiktok_button.png" alt="tiktok" class="social_button"></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61574924703757" target="_blank"><img src="images/facebook_button.png" alt="facebook" class="social_button"></a></li>
+            <li><a href="https://www.youtube.com/@FieldPathApp/" target="_blank"><img src="images/youtube_button.png" alt="youtube" class="social_button"></a></li>
         </ul>
+
+        <section class="app_user_stats limit_border">
+            <article>
+                <h2>Ověřeno reálnými výkony hráčů</h2>
+                <!-- <h2>I</h2> -->
+            </article>
+            <article class="get_the_app_div_main content_stats">
+                <div>
+                    <p class="value" data-target="7000">0</p>
+                    <p class="description">zápasů</p>
+                </div>
+                <div>
+                    <p class="value" data-target="4000">0</p>
+                    <p class="description">týmových tréninků</p>
+                </div>
+                <div>
+                    <p class="value" data-target="1500">0</p>
+                    <p class="description">individuálních tréninků</p>
+                </div>
+            </article>
+            
+        </section>
 
         <div id="section_div">
             <section class="information_function_type limit_border">
@@ -160,17 +201,32 @@
     </div>
     <div class="mobile_div_content">
         <article class="mobile_article_content">
-            <h2 data-cs="Vytvořte svůj fotbalový kalendář" data-en="Build Your Football Calendar">Build Your Football Calendar</h2>
+            <h2 data-cs="Vytvořte si svůj fotbalový kalendář" data-en="Build Your Football Calendar">Build Your Football Calendar</h2>
             <p data-cs="Sledujte svou fotbalovou cestu. Zaznamenávejte zápasy, tréninky a individuální cvičení, abyste vytvořili historii aktivit. Sledujte svůj stav kondice – mějte přehled o zraněních, regeneraci a kdy jste plně fit."
                data-en="Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.">
                Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.
             </p>
         </article>
     </div>
-</section>
-</div> <!-- konec section_div -->
+    </section>
+    </div> <!-- konec section_div -->
 
-</main>
+        <h2 style="color: white; margin-top: 80px; margin-bottom: 30px; font-size: 28px;" data-cs="Stáhni si aplikaci ještě dnes" data-en="Download the App Today">Download the App Today</h2>
+        
+        <div class="get_the_app_div_main" style="margin-bottom: 60px;">
+            <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us">
+                <div class="get_the_app_div">
+                    <article><img src="images/google_play_en.png" alt=""></article>
+                </div>
+            </a>
+            <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612">
+                <div class="get_the_app_div">
+                    <article><img src="images/app_store_en.png" alt=""></article>
+                </div>
+            </a>
+        </div>
+
+    </main>
 
 <footer>
     <div id="main_footer_div">
