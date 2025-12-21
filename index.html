@@ -27,8 +27,117 @@
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
     </script>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="background-elements">
+        <div class="bg-stat">90'</div>
+        <div class="bg-stat">3-1</div>
+        <div class="bg-stat">68'</div>
+        <div class="bg-stat">GOAL</div>
+        <div class="bg-stat">11</div>
+        <div class="bg-stat">2-0</div>
+        <div class="bg-stat">70'</div>
+        <div class="bg-stat">WIN</div>
+        <div class="bg-stat">5</div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        
+        <!-- Grafy -->
+        <div class="bg-chart bg-bar-chart">
+            <div class="bar" style="height: 60%;"></div>
+            <div class="bar" style="height: 85%;"></div>
+            <div class="bar" style="height: 45%;"></div>
+            <div class="bar" style="height: 70%;"></div>
+            <div class="bar" style="height: 90%;"></div>
+            <div class="bar" style="height: 55%;"></div>
+        </div>
+        
+        <div class="bg-chart bg-line-chart">
+            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                <polyline points="0,80 30,60 50,40 70,50 90,30 110,25 130,20 150,15 170,10 200,5" 
+                    fill="none" 
+                    stroke="rgba(131, 210, 171, 0.15)" 
+                    stroke-width="4"/>
+            </svg>
+        </div>
+        
+        <div class="bg-chart bg-pie-chart">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(131, 210, 171, 0.15)" stroke-width="2"/>
+                <path d="M 50 50 L 50 10 A 40 40 0 0 1 85 35 Z" fill="rgba(131, 210, 171, 0.08)"/>
+                <path d="M 50 50 L 85 35 A 40 40 0 0 1 90 65 Z" fill="rgba(131, 210, 171, 0.1)"/>
+            </svg>
+        </div>
+        
+        <div class="bg-chart bg-bar-chart-2">
+            <div class="bar" style="height: 75%;"></div>
+            <div class="bar" style="height: 50%;"></div>
+            <div class="bar" style="height: 90%;"></div>
+            <div class="bar" style="height: 65%;"></div>
+            <div class="bar" style="height: 40%;"></div>
+        </div>
+        
+        <div class="bg-chart bg-bar-chart-3">
+            <div class="bar" style="height: 55%;"></div>
+            <div class="bar" style="height: 80%;"></div>
+            <div class="bar" style="height: 65%;"></div>
+            <div class="bar" style="height: 45%;"></div>
+            <div class="bar" style="height: 70%;"></div>
+            <div class="bar" style="height: 85%;"></div>
+        </div>
+        
+        <div class="bg-chart bg-line-chart-2">
+            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                <polyline points="0,70 25,55 45,45 65,35 85,40 105,30 125,25 145,20 165,15 200,10" 
+                    fill="none" 
+                    stroke="rgba(131, 210, 171, 0.15)" 
+                    stroke-width="4"/>
+            </svg>
+        </div>
+        
+        <div class="bg-chart bg-pie-chart-2">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(131, 210, 171, 0.15)" stroke-width="2"/>
+                <path d="M 50 50 L 50 10 A 40 40 0 1 1 30 70 Z" fill="rgba(131, 210, 171, 0.08)"/>
+                <path d="M 50 50 L 30 70 A 40 40 0 0 1 70 70 Z" fill="rgba(131, 210, 171, 0.1)"/>
+            </svg>
+        </div>
+        
+        <div class="bg-chart bg-bar-chart-4">
+            <div class="bar" style="height: 70%;"></div>
+            <div class="bar" style="height: 55%;"></div>
+            <div class="bar" style="height: 85%;"></div>
+            <div class="bar" style="height: 60%;"></div>
+            <div class="bar" style="height: 75%;"></div>
+        </div>
+        
+        <div class="bg-chart bg-line-chart-3">
+            <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                <polyline points="0,75 20,65 40,50 60,45 80,35 100,30 120,25 140,20 160,15 200,8" 
+                    fill="none" 
+                    stroke="rgba(131, 210, 171, 0.15)" 
+                    stroke-width="4"/>
+            </svg>
+        </div>
+        
+        <div class="bg-chart bg-pie-chart-3">
+            <svg viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(131, 210, 171, 0.15)" stroke-width="2"/>
+                <path d="M 50 50 L 50 10 A 40 40 0 0 1 80 25 Z" fill="rgba(131, 210, 171, 0.08)"/>
+                <path d="M 50 50 L 80 25 A 40 40 0 0 1 75 60 Z" fill="rgba(131, 210, 171, 0.1)"/>
+            </svg>
+        </div>
+    </div>
     <header>
         <a id="menu_button" href=""><img src="images/menu.png" alt="Menu"></a>
         <div id="root_div_a">
@@ -115,7 +224,7 @@
                 <div class="mobile_div_content">
                     <article class="mobile_article_content multiple_mobile_article_content">
                         <h2 data-cs="Buď hodnocen jako profesionál!" data-en="Be Rated Like a Pro!">Be Rated Like a Pro!</h2>
-                        <p data-cs="Každý měsíc se vaše výkony hodnotí a získáte individuální hodnocení. Sledujte svůj pokrok, zlepšujte své hodnocení a posuňte svou hru na další úroveň!"
+                        <p data-cs="Po každém uložení aktivity obržíš hodnocení za splněné úkoly. Sleduj svůj pokrok, zlepšuj své hodnocení a posuň svou hru na další úroveň!"
                            data-en="Each month, your performance is evaluated, and you receive an individual rating. Track your progress, improve your rating, and take your game to the next level!">
                            Each month, your performance is evaluated, and you receive an individual rating. Track your progress, improve your rating, and take your game to the next level!
                         </p>
@@ -126,8 +235,8 @@
             <section class="information_function_type limit_border">
                 <div class="mobile_div_content">
                     <article class="mobile_article_content">
-                        <h2 data-cs="Porovnejte se s přáteli" data-en="Compare With Friends">Compare With Friends</h2>
-                        <p data-cs="Sledujte své statistiky a porovnejte je s přáteli. Kdo má nejlepší celkový výkon? Sledujte svůj pokrok a zjistěte, jak si stojíte oproti ostatním!"
+                        <h2 data-cs="Porovnávej se s přáteli" data-en="Compare With Friends">Compare With Friends</h2>
+                        <p data-cs="Sleduj své statistiky a porovnávej je s přáteli. Kdo má nejlepší celkový výkon? Sleduj svůj pokrok a zjisti, jak si stojíš oproti ostatním!"
                            data-en="Check your stats and compare them with your friends. Who has the best overall performance? Track your progress and see how you stack up against others!">
                            Check your stats and compare them with your friends. Who has the best overall performance? Track your progress and see how you stack up against others!
                         </p>
@@ -148,8 +257,8 @@
                 </div>
                 <div class="mobile_div_content">
                     <article class="mobile_article_content">
-                        <h2 data-cs="Vaše detailní statistiky na jednom místě" data-en="Your Detail Stats In One Place">Your Detail Stats In One Place</h2>
-                        <p data-cs="Sledujte každý aspekt své hry a získejte kompletní přehled o svém výkonu. Podívejte se, kde se můžete zlepšit a posuňte svou hru na další úroveň!"
+                        <h2 data-cs="Tvoje detailní statistiky na jednom místě" data-en="Your Detail Stats In One Place">Your Detail Stats In One Place</h2>
+                        <p data-cs="Sleduj každý aspekt své hry a získej kompletní přehled o svém výkonu. Podívej se, kde se můžeš zlepšit a posuň tak svou hru na další úroveň!"
                            data-en="Track every aspect of your game and get a complete overview of your performance. See where you can improve and take your game to the next level!">
                            Track every aspect of your game and get a complete overview of your performance. See where you can improve and take your game to the next level!
                         </p>
@@ -168,8 +277,8 @@
             <section class="information_function_type limit_border">
                 <div class="mobile_div_content">
                     <article class="mobile_article_content multiple_mobile_article_content">
-                        <h2 data-cs="Přidejte své aktivity" data-en="Add Your Activities">Add Your Activities</h2>
-                        <p data-cs="Sledujte všechny své aktivity na jednom místě – přidejte zápasy, tréninky a individuální cvičení pro kompletní přehled svého pokroku."
+                        <h2 data-cs="Přidávej svoje aktivity" data-en="Add Your Activities">Add Your Activities</h2>
+                        <p data-cs="Sleduj všechny svoje aktivity na jednom místě - přidávej zápasy, tréninky a individuální cvičení pro kompletní přehled svého pokroku."
                            data-en="Keep track of all your activities in one place - add your matches, training sessions, and individual workouts to get a complete overview of your progress.">
                            Keep track of all your activities in one place - add your matches, training sessions, and individual workouts to get a complete overview of your progress.
                         </p>
@@ -194,22 +303,38 @@
             </section>
     
             <section class="information_function_type limit_border">
-    <div class="mobile_div">
-        <article class="mobile_article">
-            <img src="mobile_imgs/calendar_mobile.png" alt="football calendar">
-        </article>
-    </div>
-    <div class="mobile_div_content">
-        <article class="mobile_article_content">
-            <h2 data-cs="Vytvořte si svůj fotbalový kalendář" data-en="Build Your Football Calendar">Build Your Football Calendar</h2>
-            <p data-cs="Sledujte svou fotbalovou cestu. Zaznamenávejte zápasy, tréninky a individuální cvičení, abyste vytvořili historii aktivit. Sledujte svůj stav kondice – mějte přehled o zraněních, regeneraci a kdy jste plně fit."
-               data-en="Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.">
-               Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.
-            </p>
-        </article>
-    </div>
-    </section>
-    </div> <!-- konec section_div -->
+                <div class="mobile_div">
+                    <article class="mobile_article">
+                        <img src="mobile_imgs/calendar_mobile.png" alt="football calendar">
+                    </article>
+                </div>
+                <div class="mobile_div_content">
+                    <article class="mobile_article_content">
+                        <h2 data-cs="Vytvoř si svůj fotbalový kalendář" data-en="Build Your Football Calendar">Build Your Football Calendar</h2>
+                        <p data-cs="Sleduj svou fotbalovou cestu. Zaznamenávej zápasy, tréninky a individuální cvičení, abys si vytvořil historii aktivit. Sleduj svůj stav kondice - měj přehled o zraněních, regeneraci a kdy jsi plně fit."
+                        data-en="Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.">
+                        Track your football journey. Log your matches, trainings, and individual sessions to build your history of activities. Monitor your fitness status - stay aware of injuries, recovery periods, and when you're fully fit.
+                        </p>
+                    </article>
+                </div>
+            </section>
+            <section class="information_function_type limit_border">
+                <div class="mobile_div_content">
+                    <article class="mobile_article_content">
+                        <h2 data-cs="Sbírej odznaky" data-en="Collect badges">Collect Badges</h2>
+                        <p data-cs="Odměň svůj progres odznaky za dosažené milníky. Každý splněný cíl je důkazem tvojí práce a posunu. Sbírej odznaky, chlub se svými úspěchy a motivuj sebe i ostatní."
+                           data-en="Reward your progress with badges earned for reaching milestones. Every achieved goal is proof of your hard work and improvement. Collect badges, showcase your achievements, and motivate yourself and others.">
+                           Reward your progress with badges earned for reaching milestones. Every achieved goal is proof of your hard work and improvement. Collect badges, showcase your achievements, and motivate yourself and others.
+                        </p>
+                    </article>
+                </div>
+                <div class="mobile_div">
+                    <article class="mobile_article">
+                        <img src="mobile_imgs/badges_mobile.png" alt="friend football stats">
+                    </article>
+                </div>
+            </section>
+        </div> <!-- konec section_div -->
 
         <h2 style="color: white; margin-top: 80px; margin-bottom: 30px; font-size: 28px;" data-cs="Stáhni si aplikaci ještě dnes" data-en="Download the App Today">Download the App Today</h2>
         

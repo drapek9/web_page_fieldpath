@@ -191,6 +191,420 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: linear-gradient(to bottom, #83d2ab, rgb(0, 0, 0));
     background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: var(--grid-y, 0);
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 100px,
+            rgba(131, 210, 171, 0.03) 100px,
+            rgba(131, 210, 171, 0.03) 102px
+        );
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: var(--grid-y, 0);
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(131, 210, 171, 0.03) 100px,
+            rgba(131, 210, 171, 0.03) 102px
+        );
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+.background-elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bg-stat {
+    position: absolute;
+    color: rgba(131, 210, 171, 0.08);
+    font-size: 120px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+.bg-stat:nth-child(1) {
+    top: 8%;
+    left: 3%;
+    transform: rotate(-15deg);
+}
+
+.bg-stat:nth-child(2) {
+    top: 25%;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.bg-stat:nth-child(3) {
+    top: 70%;
+    left: 8%;
+    transform: rotate(-10deg);
+}
+
+.bg-stat:nth-child(4) {
+    top: 75%;
+    right: 12%;
+    transform: rotate(15deg);
+}
+
+.bg-stat:nth-child(5) {
+    top: 35%;
+    left: 55%;
+    transform: rotate(-25deg);
+}
+
+.bg-stat:nth-child(6) {
+    top: 15%;
+    right: 30%;
+    transform: rotate(12deg);
+    font-size: 80px;
+}
+
+.bg-stat:nth-child(7) {
+    top: 60%;
+    left: 35%;
+    transform: rotate(-18deg);
+    font-size: 100px;
+}
+
+.bg-stat:nth-child(8) {
+    top: 85%;
+    right: 5%;
+    transform: rotate(22deg);
+}
+
+.bg-stat:nth-child(9) {
+    top: 110%;
+    left: 5%;
+    transform: rotate(-12deg);
+    font-size: 90px;
+}
+
+.bg-stat:nth-child(10) {
+    top: 135%;
+    right: 20%;
+    transform: rotate(18deg);
+}
+
+.bg-stat:nth-child(11) {
+    top: 155%;
+    left: 20%;
+    transform: rotate(-20deg);
+    font-size: 110px;
+}
+
+.bg-stat:nth-child(12) {
+    top: 180%;
+    right: 8%;
+    transform: rotate(15deg);
+}
+
+.bg-stat:nth-child(13) {
+    top: 205%;
+    left: 55%;
+    transform: rotate(-10deg);
+    font-size: 85px;
+}
+
+.bg-stat:nth-child(14) {
+    top: 230%;
+    right: 25%;
+    transform: rotate(25deg);
+}
+
+.bg-circle {
+    position: absolute;
+    border: 2px solid rgba(131, 210, 171, 0.1);
+    border-radius: 50%;
+    will-change: transform;
+}
+
+.bg-circle:nth-child(15) {
+    width: 300px;
+    height: 300px;
+    top: 12%;
+    right: 2%;
+}
+
+.bg-circle:nth-child(16) {
+    width: 200px;
+    height: 200px;
+    top: 42%;
+    left: 3%;
+}
+
+.bg-circle:nth-child(17) {
+    width: 250px;
+    height: 250px;
+    top: 68%;
+    right: 8%;
+}
+
+.bg-circle:nth-child(18) {
+    width: 150px;
+    height: 150px;
+    top: 22%;
+    left: 65%;
+}
+
+.bg-circle:nth-child(19) {
+    width: 180px;
+    height: 180px;
+    top: 48%;
+    right: 35%;
+}
+
+.bg-circle:nth-child(20) {
+    width: 220px;
+    height: 220px;
+    top: 100%;
+    left: 8%;
+}
+
+.bg-circle:nth-child(21) {
+    width: 160px;
+    height: 160px;
+    top: 125%;
+    right: 5%;
+}
+
+.bg-circle:nth-child(22) {
+    width: 280px;
+    height: 280px;
+    top: 145%;
+    left: 2%;
+}
+
+.bg-circle:nth-child(23) {
+    width: 190px;
+    height: 190px;
+    top: 165%;
+    right: 30%;
+}
+
+.bg-circle:nth-child(24) {
+    width: 210px;
+    height: 210px;
+    top: 190%;
+    left: 50%;
+}
+
+.bg-circle:nth-child(25) {
+    width: 170px;
+    height: 170px;
+    top: 215%;
+    right: 12%;
+}
+
+.bg-circle:nth-child(26) {
+    width: 240px;
+    height: 240px;
+    top: 240%;
+    left: 15%;
+}
+
+.bg-chart {
+    position: absolute;
+    opacity: 0.4;
+    will-change: transform;
+}
+
+.bg-bar-chart {
+    width: 200px;
+    height: 120px;
+    top: 29%;
+    left: 12%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 8px;
+    padding: 10px;
+    transform: rotate(-10deg);
+}
+
+.bg-bar-chart .bar {
+    flex: 1;
+    background: linear-gradient(to top, rgba(131, 210, 171, 0.2), rgba(131, 210, 171, 0.05));
+    border-radius: 4px 4px 0 0;
+    min-width: 12px;
+}
+
+.bg-line-chart {
+    width: 250px;
+    height: 150px;
+    top: 45%;
+    right: 12%;
+    transform: rotate(15deg);
+}
+
+.bg-line-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-pie-chart {
+    width: 150px;
+    height: 150px;
+    top: 12%;
+    left: 8%;
+    transform: rotate(-20deg);
+}
+
+.bg-pie-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-bar-chart-2 {
+    width: 180px;
+    height: 100px;
+    top: 72%;
+    right: 28%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 6px;
+    padding: 8px;
+    transform: rotate(12deg);
+}
+
+.bg-bar-chart-2 .bar {
+    flex: 1;
+    background: linear-gradient(to top, rgba(131, 210, 171, 0.18), rgba(131, 210, 171, 0.04));
+    border-radius: 3px 3px 0 0;
+    min-width: 10px;
+}
+
+.bg-bar-chart-3 {
+    width: 220px;
+    height: 130px;
+    top: 95%;
+    left: 58%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 7px;
+    padding: 10px;
+    transform: rotate(-8deg);
+}
+
+.bg-bar-chart-3 .bar {
+    flex: 1;
+    background: linear-gradient(to top, rgba(131, 210, 171, 0.19), rgba(131, 210, 171, 0.05));
+    border-radius: 4px 4px 0 0;
+    min-width: 11px;
+}
+
+.bg-line-chart-2 {
+    width: 230px;
+    height: 140px;
+    top: 118%;
+    right: 3%;
+    transform: rotate(-12deg);
+}
+
+.bg-line-chart-2 svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-pie-chart-2 {
+    width: 140px;
+    height: 140px;
+    top: 140%;
+    left: 10%;
+    transform: rotate(18deg);
+}
+
+.bg-pie-chart-2 svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-bar-chart-4 {
+    width: 190px;
+    height: 110px;
+    top: 160%;
+    right: 38%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 6px;
+    padding: 9px;
+    transform: rotate(10deg);
+}
+
+.bg-bar-chart-4 .bar {
+    flex: 1;
+    background: linear-gradient(to top, rgba(131, 210, 171, 0.16), rgba(131, 210, 171, 0.03));
+    border-radius: 3px 3px 0 0;
+    min-width: 10px;
+}
+
+.bg-line-chart-3 {
+    width: 240px;
+    height: 145px;
+    top: 175%;
+    left: 3%;
+    transform: rotate(-15deg);
+}
+
+.bg-line-chart-3 svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg-pie-chart-3 {
+    width: 160px;
+    height: 160px;
+    top: 195%;
+    right: 8%;
+    transform: rotate(-22deg);
+}
+
+.bg-pie-chart-3 svg {
+    width: 100%;
+    height: 100%;
+}
+
+main, header, footer {
+    position: relative;
+    z-index: 1;
 }
 
 #app_name {
@@ -928,6 +1342,58 @@ footer {
 }
 
 @media(max-width: 700px){
+    .bg-stat {
+        font-size: 60px !important;
+    }
+    
+    .bg-circle {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    
+    .bg-circle:nth-child(9) {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .bg-chart {
+        opacity: 0.2 !important;
+    }
+    
+    .bg-bar-chart,
+    .bg-bar-chart-2 {
+        width: 120px !important;
+        height: 80px !important;
+    }
+    
+    .bg-line-chart {
+        width: 150px !important;
+        height: 90px !important;
+    }
+    
+    .bg-pie-chart {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .bg-bar-chart-3,
+    .bg-bar-chart-4 {
+        width: 100px !important;
+        height: 60px !important;
+    }
+    
+    .bg-line-chart-2,
+    .bg-line-chart-3 {
+        width: 120px !important;
+        height: 70px !important;
+    }
+    
+    .bg-pie-chart-2,
+    .bg-pie-chart-3 {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
     .app_user_stats {
         margin-top: 60px;
         margin-bottom: 40px;

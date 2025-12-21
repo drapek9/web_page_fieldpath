@@ -75,4 +75,43 @@ document.addEventListener("DOMContentLoaded", () => {
     // Observe all elements that should animate
     const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .get_the_app_button, .social_ul li, .app_user_stats, .content_stats > div');
     animateElements.forEach(el => observer.observe(el));
+
+    // Parallax effect for background elements
+    const bgElements = document.querySelectorAll('.bg-stat, .bg-circle, .bg-chart');
+    
+    // Uložit původní rotace
+    const originalRotations = {};
+    bgElements.forEach((el, index) => {
+        const computedStyle = window.getComputedStyle(el);
+        const transform = computedStyle.transform;
+        const match = transform.match(/rotate\(([^)]+)\)/);
+        originalRotations[index] = match ? match[1] : '0deg';
+    });
+    
+    let ticking = false;
+    
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+        
+        bgElements.forEach((el, index) => {
+            const speed = 0.3 + (index % 3) * 0.1; // Různé rychlosti pro různé prvky
+            const yPos = -(scrolled * speed);
+            const rotation = originalRotations[index] || '0deg';
+            el.style.transform = `translateY(${yPos}px) rotate(${rotation})`;
+        });
+
+        // Parallax pro mřížku
+        const gridSpeed = 0.1;
+        const gridYPos = -(scrolled * gridSpeed);
+        document.body.style.setProperty('--grid-y', `${gridYPos}px`);
+        
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    });
 });
