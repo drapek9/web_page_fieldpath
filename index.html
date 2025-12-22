@@ -11,7 +11,7 @@
     <script type="module">
         console.log("no joooo 1")
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
 
         const firebaseConfig = {
             apiKey: "AIzaSyBuXBaUF4bEy6-guRNI1Sh6uuuYUp7QW9c",
@@ -26,6 +26,12 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
+
+        window.trackClickEvent = function (eventName) {
+            logEvent(analytics, eventName, {
+            // platform: "android"
+            });
+        };
     </script>
   </head>
   <body>
@@ -33,12 +39,12 @@
         <div class="bg-stat">90'</div>
         <div class="bg-stat">3-1</div>
         <div class="bg-stat">68'</div>
-        <div class="bg-stat">GOAL</div>
+        <div class="bg-stat">70'</div>
         <div class="bg-stat">11</div>
         <div class="bg-stat">2-0</div>
-        <div class="bg-stat">70'</div>
+        <div class="bg-stat">GOAL</div>
         <div class="bg-stat">WIN</div>
-        <div class="bg-stat">5</div>
+        <div class="bg-stat"></div>
         <div class="bg-circle"></div>
         <div class="bg-circle"></div>
         <div class="bg-circle"></div>
@@ -47,10 +53,10 @@
         <div class="bg-circle"></div>
         <div class="bg-circle"></div>
         <div class="bg-circle"></div>
+        <!-- <div class="bg-circle"></div>
         <div class="bg-circle"></div>
         <div class="bg-circle"></div>
-        <div class="bg-circle"></div>
-        <div class="bg-circle"></div>
+        <div class="bg-circle"></div> -->
         
         <!-- Grafy -->
         <div class="bg-chart bg-bar-chart">
@@ -87,14 +93,14 @@
             <div class="bar" style="height: 40%;"></div>
         </div>
         
-        <div class="bg-chart bg-bar-chart-3">
+        <!-- <div class="bg-chart bg-bar-chart-3">
             <div class="bar" style="height: 55%;"></div>
             <div class="bar" style="height: 80%;"></div>
             <div class="bar" style="height: 65%;"></div>
             <div class="bar" style="height: 45%;"></div>
             <div class="bar" style="height: 70%;"></div>
             <div class="bar" style="height: 85%;"></div>
-        </div>
+        </div> -->
         
         <div class="bg-chart bg-line-chart-2">
             <svg viewBox="0 0 200 100" preserveAspectRatio="none">
@@ -167,12 +173,12 @@
         </h1>
 
         <div class="get_the_app_div_main">
-            <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us">
+            <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us" onclick="trackClickEvent('open_google_play')" target="_blank">
                 <div class="get_the_app_div">
                     <article><img src="images/google_play_en.png" alt=""></article>
                 </div>
             </a>
-            <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612">
+            <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612" onclick="trackClickEvent('open_app_store')" target="_blank">
                 <div class="get_the_app_div">
                     <article><img src="images/app_store_en.png" alt=""></article>
                 </div>
@@ -180,29 +186,29 @@
         </div>
 
         <ul class="social_ul">
-            <li><a href="https://www.instagram.com/fieldpathapp/" target="_blank"><img src="images/instagram_button.png" alt="instagram" class="social_button"></a></li>
-            <li><a href="https://www.tiktok.com/@fieldpath.app" target="_blank"><img src="images/tiktok_button.png" alt="tiktok" class="social_button"></a></li>
-            <li><a href="https://www.facebook.com/profile.php?id=61574924703757" target="_blank"><img src="images/facebook_button.png" alt="facebook" class="social_button"></a></li>
-            <li><a href="https://www.youtube.com/@FieldPathApp/" target="_blank"><img src="images/youtube_button.png" alt="youtube" class="social_button"></a></li>
+            <li><a href="https://www.instagram.com/fieldpathapp/" target="_blank" onclick="trackClickEvent('open_instagram')"><img src="images/instagram_button.png" alt="instagram" class="social_button"></a></li>
+            <li><a href="https://www.tiktok.com/@fieldpath.app" target="_blank" onclick="trackClickEvent('open_tiktok')"><img src="images/tiktok_button.png" alt="tiktok" class="social_button"></a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61574924703757" target="_blank" onclick="trackClickEvent('open_facebook')"><img src="images/facebook_button.png" alt="facebook" class="social_button"></a></li>
+            <li><a href="https://www.youtube.com/@FieldPathApp/" target="_blank" onclick="trackClickEvent('open_youtube')"><img src="images/youtube_button.png" alt="youtube" class="social_button"></a></li>
         </ul>
 
         <section class="app_user_stats limit_border">
             <article>
-                <h2>Ověřeno reálnými výkony hráčů</h2>
+                <h2 data-cs="Ověřeno reálnými výkony hráčů" data-en="Verified by real player performances">Verified by real player performances</h2>
                 <!-- <h2>I</h2> -->
             </article>
             <article class="get_the_app_div_main content_stats">
                 <div>
-                    <p class="value" data-target="7000">0</p>
-                    <p class="description">zápasů</p>
+                    <p class="value" data-target="7500">0</p>
+                    <p class="description" data-cs="zápasů" data-en="matches">matches</p>
                 </div>
                 <div>
                     <p class="value" data-target="4000">0</p>
-                    <p class="description">týmových tréninků</p>
+                    <p class="description" data-cs="týmových tréninků" data-en="team trainings">team trainings</p>
                 </div>
                 <div>
                     <p class="value" data-target="1500">0</p>
-                    <p class="description">individuálních tréninků</p>
+                    <p class="description" data-cs="individuálních tréninků" data-en="individual trainings">individual trainings</p>
                 </div>
             </article>
             
@@ -285,7 +291,8 @@
                         <ul>
                             <li data-cs="Zápas" data-en="Match"><strong>Match</strong></li>
                             <li data-cs="Trénink" data-en="Training"><strong>Training</strong></li>
-                            <li data-cs="Ind. trénink" data-en="Ind. Training"><strong>Ind. Training</strong> - <span style="font-size: 11px; color: rgba(255, 255, 255, 0.789);" data-cs="Fotbal, běh, fitness nebo jiné" data-en="Football, Running, Fitness or Other">Football, Running, Fitness or Other</span></li>
+                            <!-- <li data-cs="Ind. trénink" data-en="Ind. Training"><strong>Ind. Training</strong> - <span style="font-size: 11px; color: rgba(255, 255, 255, 0.789);" data-cs="Fotbal, běh, fitness nebo jiné" data-en="Football, Running, Fitness or Other">Football, Running, Fitness or Other</span></li> -->
+                            <li data-cs="Ind. trénink" data-en="Ind. Training"><strong>Ind. Training</strong></li>
                         </ul>
                     </article>
                 </div>
@@ -336,20 +343,65 @@
             </section>
         </div> <!-- konec section_div -->
 
-        <h2 style="color: white; margin-top: 80px; margin-bottom: 30px; font-size: 28px;" data-cs="Stáhni si aplikaci ještě dnes" data-en="Download the App Today">Download the App Today</h2>
+        <section class="premium_section limit_border">
+            <div class="premium_header_wrapper">
+                <svg class="premium_crown" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 16L3 5L8.5 10L12 4L15.5 10L21 5L19 16H5Z" fill="url(#crownGradient)" stroke="url(#crownGradient)" stroke-width="1.5" stroke-linejoin="round"/>
+                    <defs>
+                        <linearGradient id="crownGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h3 class="premium_heading" data-cs="Prémiové funkce pro hráče, kteří chtějí víc" data-en="Premium features for players who want more">Premium features for players who want more</h3>
+            </div>
+            <p class="premium_subtext" data-cs="Odemkni pokročilé nástroje, sleduj svůj progres do hloubky a vyčnívej mezi ostatními hráči." data-en="Unlock advanced tools to track your progress deeper and stand out among other players.">Unlock advanced tools to track your progress deeper and stand out among other players.</p>
+            <div class="premium_features">
+                <article class="premium_card">
+                    <div class="premium_card_icon">
+                        <img src="images/ai_premium_white.png" alt="" class="premium_icon_img">
+                    </div>
+                    <h4 data-cs="AI slovní hodnocení aktivit" data-en="AI-powered activity feedback">AI-powered activity feedback</h4>
+                    <p data-cs="Získej slovní hodnocení aktivit od AI - shrnutí výkonů, rady ke zlepšení a přehled progresu." data-en="Get deeper analysis of your performance and long-term progress.">Get deeper analysis of your performance and long-term progress.</p>
+                </article>
+                <article class="premium_card">
+                    <div class="premium_card_icon">
+                        <img src="images/no_ads_premium_white.png" alt="" class="premium_icon_img">
+                    </div>
+                    <h4 data-cs="Bez reklam" data-en="No ads">No ads</h4>
+                    <p data-cs="Používej aplikaci bez rušení a soustřeď se jen na výkon." data-en="Use the app without interruptions and focus on your performance.">Use the app without interruptions and focus on your performance.</p>
+                </article>
+                <article class="premium_card">
+                    <div class="premium_card_icon">
+                        <img src="images/schedule_premium_white.png" alt="" class="premium_icon_img">
+                    </div>
+                    <h4 data-cs="Plánování aktivit" data-en="Activity planning">Activity planning</h4>
+                    <p data-cs="Plánuj aktivity dopředu, dostávej upozornění před jejich začátkem a sleduj vizuální odpočet v aplikaci." data-en="Plan your activities ahead, receive reminders before they start, and track a visual countdown in the app.">Plan your activities ahead, receive reminders before they start, and track a visual countdown in the app.</p>
+                </article>
+            </div>
+        </section>
+        <section>
+            <article>
+                <h2 style="color: white; margin-top: 80px; margin-bottom: 30px; font-size: 28px;" data-cs="Stáhni si aplikaci ještě dnes!" data-en="Download the App Today!">Download the App Today!</h2>
+            </article>
+            <article>
+                <div class="get_the_app_div_main" style="margin-bottom: 60px;">
+                    <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us">
+                        <div class="get_the_app_div">
+                            <article><img src="images/google_play_en.png" alt=""></article>
+                        </div>
+                    </a>
+                    <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612">
+                        <div class="get_the_app_div">
+                            <article><img src="images/app_store_en.png" alt=""></article>
+                        </div>
+                    </a>
+                </div>
+            </article>
+        </section>
         
-        <div class="get_the_app_div_main" style="margin-bottom: 60px;">
-            <a class="get_the_app_button" href="https://play.google.com/store/apps/details?id=com.fieldpathapp.fieldpath&hl=en-us">
-                <div class="get_the_app_div">
-                    <article><img src="images/google_play_en.png" alt=""></article>
-                </div>
-            </a>
-            <a class="get_the_app_button" href="https://apps.apple.com/cz/app/fieldpath/id6749018612">
-                <div class="get_the_app_div">
-                    <article><img src="images/app_store_en.png" alt=""></article>
-                </div>
-            </a>
-        </div>
 
     </main>
 

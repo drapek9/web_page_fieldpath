@@ -13,6 +13,7 @@ fetch('https://ipwhois.app/json/')
   .then(res => res.json())
   .then(data => {
     const country = data.country_code;
+    
     if(["CZ", "SK"].includes(country)) setLanguage('cs');
     else setLanguage('en');
   })
@@ -73,19 +74,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
 
     // Observe all elements that should animate
-    const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .get_the_app_button, .social_ul li, .app_user_stats, .content_stats > div');
+    const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .get_the_app_button, .social_ul li, .app_user_stats, .content_stats > div, .premium_section, .premium_card');
     animateElements.forEach(el => observer.observe(el));
 
     // Parallax effect for background elements
     const bgElements = document.querySelectorAll('.bg-stat, .bg-circle, .bg-chart');
     
-    // Uložit původní rotace
-    const originalRotations = {};
+    // Uložit původní transformace (včetně rotací), aby se při scrollu neztratilo naklonění
+    const originalTransforms = {};
     bgElements.forEach((el, index) => {
         const computedStyle = window.getComputedStyle(el);
         const transform = computedStyle.transform;
-        const match = transform.match(/rotate\(([^)]+)\)/);
-        originalRotations[index] = match ? match[1] : '0deg';
+        // Pokud není žádná transformace, uložíme prázdný řetězec
+        originalTransforms[index] = transform === 'none' ? '' : transform;
     });
     
     let ticking = false;
@@ -96,8 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
         bgElements.forEach((el, index) => {
             const speed = 0.3 + (index % 3) * 0.1; // Různé rychlosti pro různé prvky
             const yPos = -(scrolled * speed);
-            const rotation = originalRotations[index] || '0deg';
-            el.style.transform = `translateY(${yPos}px) rotate(${rotation})`;
+            const baseTransform = originalTransforms[index] || '';
+            // Zachováme původní transformaci (včetně rotace) a jen přidáme translateY
+            el.style.transform = `translateY(${yPos}px) ${baseTransform}`;
         });
 
         // Parallax pro mřížku
