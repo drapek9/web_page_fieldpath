@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FieldPath - Track Your Football Progress</title>
+    <title data-en="FieldPath - Track Your Football Experiences." data-cs="FieldPath - Sleduj své fotbalové zážitky."></title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/app_logo_rel.png" type="image/x-icon">
-    <meta name="description" data-cs="Chtěli jste někdy vidět všechny své fotbalové statistiky na jednom místě? Pokud ano, FieldPath je aplikace pro vás! Sledujte svůj výkon, porovnejte se s přáteli a spoluhráči a posuňte svou hru na další úroveň s podrobnými informacemi o gólech, asistencích, zápasech a dalších." 
-          data-en="Have you ever wanted to see all your football stats in one place? If so, FieldPath is the app for you! Track your performance, compare yourself with friends and teammates, and take your game to the next level with detailed information on goals, assists, matches, and more.">
+    <meta name="keywords" content="FieldPath, football tracker, football app, soccer app, football social network, football stats, soccer stats, player performance, match statistics, football player app, player development">
+    <meta name="description" data-cs="Sleduj a zaznamenávej všechny své fotbalové statistiky na jednom místě s aplikací FieldPath. Měj přehled o svém výkonu, porovnávej se s přáteli a spoluhráči a posuň svou hru dál díky detailním statistikám zápasů, gólů, asistencí a dalších dat." 
+          data-en="Track and record all your football stats in one place with FieldPath. Monitor your performance, compare stats with friends and teammates, and improve your game with detailed insights on matches, goals, assists, and more.">
     <script type="module">
-        console.log("no joooo 1")
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
 
@@ -23,7 +23,6 @@
             measurementId: "G-QTZZXHG8FJ"
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
 
@@ -35,6 +34,8 @@
     </script>
   </head>
   <body>
+    <div class="grid-vertical"></div>
+    <div class="grid-horizontal"></div>
     <div class="background-elements">
         <div class="bg-stat">90'</div>
         <div class="bg-stat">3-1</div>
@@ -167,9 +168,10 @@
         <p id="app_name">FieldPath</p>
         
         <h1 id="slogan">
-            <span data-cs="Sleduj svůj fotbalový pokrok." data-en="Track Your Football Progress.">Track Your Football Progress.</span>
+            <!-- <span data-cs="Sleduj svůj fotbalový pokrok." data-en="Track Your Football Progress."></span> -->
+            <span data-cs="Sleduj své fotbalové zážitky." data-en="Track your football experiences."></span>
             <br>
-            <span data-cs="Soutěž s přáteli." data-en="Compete with Friends.">Compete with Friends.</span>
+            <span data-cs="Soutěž s přáteli." data-en="Compete with Friends."></span>
         </h1>
 
         <div class="get_the_app_div_main">

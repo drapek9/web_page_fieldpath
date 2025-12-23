@@ -189,16 +189,32 @@ hr {
     margin-left: 11px;
 }
 
+html, body {
+    min-height: 100%;
+}
+
 body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #83d2ab, rgb(0, 0, 0));
-    background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
 }
 
 body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, #83d2ab, #000);
+    /* background: linear-gradient(
+  to bottom,
+  #83d2ab 0%,
+  #1a3d2f 50%,
+  #000 100%
+); */
+}
+
+.grid-horizontal {
     content: "";
     position: fixed;
     top: var(--grid-y, 0);
@@ -219,7 +235,7 @@ body::before {
     transition: transform 0.1s ease-out;
 }
 
-body::after {
+.grid-vertical {
     content: "";
     position: fixed;
     top: var(--grid-y, 0);
