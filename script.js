@@ -3,7 +3,14 @@
 
 function setLanguage(lang) {
     document.querySelectorAll('[data-cs]').forEach(el => {
-      el.textContent = el.dataset[lang];
+      const translation = el.dataset[lang];
+      // Pokud překlad existuje, použij ho, jinak použij anglický (data-en) nebo výchozí text
+      if (translation) {
+        el.textContent = translation;
+      } else if (el.dataset.en) {
+        el.textContent = el.dataset.en;
+      }
+      // Pokud ani anglický překlad neexistuje, zůstane výchozí text
     });
     document.documentElement.lang = lang === 'cs' ? 'cs' : 'en';
     localStorage.setItem('lang', lang); // uloží volbu uživatele

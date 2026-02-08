@@ -9,7 +9,7 @@
     <meta name="keywords" content="FieldPath, football tracker, football app, soccer app, football social network, football stats, soccer stats, player performance, match statistics, football player app, player development">
     <meta name="description" data-cs="Sleduj a zaznamenávej všechny své fotbalové statistiky na jednom místě s aplikací FieldPath. Měj přehled o svém výkonu, porovnávej se s přáteli a spoluhráči a posuň svou hru dál díky detailním statistikám zápasů, gólů, asistencí a dalších dat." 
           data-en="Track and record all your football stats in one place with FieldPath. Monitor your performance, compare stats with friends and teammates, and improve your game with detailed insights on matches, goals, assists, and more.">
-    <script type="module">
+    <!-- <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
         import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
 
@@ -31,9 +31,73 @@
             // platform: "android"
             });
         };
-    </script>
+    </script> -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBuXBaUF4bEy6-guRNI1Sh6uuuYUp7QW9c",
+            authDomain: "fieldpath-website.firebaseapp.com",
+            projectId: "fieldpath-website",
+            storageBucket: "fieldpath-website.firebasestorage.app",
+            messagingSenderId: "540797885152",
+            appId: "1:540797885152:web:a148d375ed9762e6b28e85",
+            measurementId: "G-QTZZXHG8FJ"
+        };
+
+        let analytics;
+
+        window.startAnalytics = () => {
+            if (analytics) return; // aby se nespustilo 2×
+            const app = initializeApp(firebaseConfig);
+            analytics = getAnalytics(app);
+        };
+
+        window.trackClickEvent = (eventName) => {
+            if (!analytics) return;
+            logEvent(analytics, eventName);
+        };
+
+        // automatické spuštění, pokud už uživatel souhlasil dříve
+        if (["all", "essential"].includes(localStorage.getItem("analyticsConsent"))) {
+            window.startAnalytics();
+        }
+        </script>
   </head>
   <body>
+    <div id="consent-overlay">
+        <div class="consent-box">
+            <h2 data-cs="Nastavení soukromí" data-en="Privacy Settings">Privacy Settings</h2>
+            <p data-cs="Souhlasem nám umožňujete sbírat anonymní data o používání webu, abychom mohli zlepšovat obsah a funkce." data-en="By giving your consent, you allow us to collect anonymous data on how the website is used so that we can improve content and features.">
+                By giving your consent, you allow us to collect anonymous data on how the website is used so that we can improve content and features.
+            </p>
+
+            <div class="consent-buttons">
+            <button class="btn-primary" onclick="acceptAll()" data-cs="Přijmout" data-en="Accept">Accept</button>
+            <button class="btn-secondary" onclick="acceptEssential()" data-cs="Přijmout nezbytné" data-en="Accept Essential">Accept Essential</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function acceptAll() {
+            localStorage.setItem("analyticsConsent", "all");
+            document.getElementById("consent-overlay").remove();
+            window.startAnalytics();
+        }
+
+        function acceptEssential() {
+            localStorage.setItem("analyticsConsent", "essential");
+            document.getElementById("consent-overlay").remove();
+            window.startAnalytics();
+        }
+
+        // pokud už bylo cokoliv přijato
+        if (localStorage.getItem("analyticsConsent")) {
+            const overlay = document.getElementById("consent-overlay");
+            if (overlay) overlay.remove();
+        }
+    </script>
     <div class="grid-vertical"></div>
     <div class="grid-horizontal"></div>
     <div class="background-elements">
