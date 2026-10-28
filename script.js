@@ -71,6 +71,12 @@ document.querySelectorAll(".lang_switcher_btn").forEach((btn) => {
 });
 
 document.querySelector(".site_header_brand")?.addEventListener("click", (event) => {
+    const href = event.currentTarget.getAttribute("href") || "";
+    const staysOnPage = href === "" || href === "#top" || href.startsWith("#");
+    if (!staysOnPage) {
+        closeMobileNav();
+        return;
+    }
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
     closeMobileNav();
@@ -94,11 +100,9 @@ function closeMobileNav() {
     button.setAttribute("aria-expanded", "false");
 }
 
-document.querySelectorAll('#root_div_a a[href^="#"]').forEach((link) => {
+document.querySelectorAll("#root_div_a a").forEach((link) => {
     link.addEventListener("click", () => {
-        if (window.innerWidth <= 700) {
-            closeMobileNav();
-        }
+        closeMobileNav();
     });
 });
 
@@ -124,12 +128,6 @@ document.querySelector(".site_header_download")?.addEventListener("click", (even
         window.pauseReviewsCarousel();
     }
     if (window.innerWidth <= 700) {
-        closeMobileNav();
-    }
-});
-
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 700) {
         closeMobileNav();
     }
 });
@@ -176,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
 
     // Observe all elements that should animate
-    const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .social_ul li, .premium_section, .premium_card, .why_content, .why_visual, .faq_section, .community_header');
+    const animateElements = document.querySelectorAll('.mobile_article, .mobile_multiple_article, .mobile_article_content, .events_div_photos, .social_ul li, .premium_section, .premium_card, .why_content, .why_visual, .faq_section, .community_header, .philosophy_point');
     animateElements.forEach(el => observer.observe(el));
 
     document.querySelectorAll('.get_the_app_button').forEach((el) => {
