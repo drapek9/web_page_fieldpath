@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-cs="Podmínky použití webu FIELDPATH" data-en="FIELDPATH Website Terms of Use">FIELDPATH Website Terms of Use</title>
+    <link rel="canonical" href="https://www.fieldpathapp.com/website_terms/">
+    <link rel="icon" href="/images/app_logo_rel.png" type="image/x-icon">
+    <style>
+        :root{--bg:#f7f9fb;--card:#ffffff;--accent:#0b5fff;--muted:#6b7280;--text:#0f172a}
+        body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);line-height:1.65;margin:0;padding:32px}
+        .container{max-width:900px;margin:0 auto}
+        .topbar{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:12px}
+        .lang_switcher{display:inline-flex;gap:6px}
+        .lang_switcher_btn{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;font-weight:600}
+        .lang_switcher_btn.is_active{background:#0f172a;color:#fff;border-color:#0f172a}
+        .scope{background:#eef6ff;border:1px solid #cfe3ff;color:#0b3b7a;padding:12px 14px;border-radius:10px;margin:12px 0 20px;font-size:14px}
+        article.card{background:var(--card);padding:24px;border-radius:12px;box-shadow:0 4px 16px rgba(15,23,42,0.03)}
+        h1{margin:0;font-size:24px}
+        h2{font-size:18px;margin-top:28px}
+        p,li{margin:8px 0}
+        ul{margin-left:20px}
+        a{color:var(--accent)}
+        footer{margin-top:18px;color:var(--muted);font-size:13px}
+        .back{font-size:14px}
+    </style>
+    <script>
+        (function () {
+            const saved = localStorage.getItem("lang");
+            if (saved === "cs" || saved === "en") {
+                document.documentElement.lang = saved;
+                return;
+            }
+            const browserLangs = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
+            const prefersCzech = browserLangs.some((lang) => {
+                const code = lang.toLowerCase().slice(0, 2);
+                return code === "cs" || code === "sk";
+            });
+            document.documentElement.lang = prefersCzech ? "cs" : "en";
+        })();
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="topbar">
+        <a class="back" href="/" data-cs="← Zpět na web" data-en="← Back to website">← Back to website</a>
+        <div class="lang_switcher" role="group" aria-label="Language">
+            <button type="button" class="lang_switcher_btn" data-lang="cs" aria-pressed="false">CS</button>
+            <button type="button" class="lang_switcher_btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+    </div>
+
+    <header>
+        <h1 data-cs="Podmínky použití webu FIELDPATH" data-en="FIELDPATH Website Terms of Use">FIELDPATH Website Terms of Use</h1>
+    </header>
+
+    <p class="scope" data-cs="Tyto podmínky platí pouze pro webové stránky fieldpathapp.com. Neplatí pro mobilní aplikaci FieldPath — ta má vlastní podmínky použití." data-en="These terms apply only to the fieldpathapp.com website. They do not apply to the FieldPath mobile app, which has its own terms of use.">
+        These terms apply only to the fieldpathapp.com website. They do not apply to the FieldPath mobile app, which has its own terms of use.
+    </p>
+
+    <article class="card">
+        <h2 data-cs="1. Provozovatel" data-en="1. Operator">1. Operator</h2>
+        <p data-cs="Web provozují Šimon Drápal a Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Česká republika. Kontakt: legal@fieldpathapp.com." data-en="The website is operated by Šimon Drápal and Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Czech Republic. Contact: legal@fieldpathapp.com.">
+            The website is operated by Šimon Drápal and Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Czech Republic. Contact: legal@fieldpathapp.com.
+        </p>
+
+        <h2 data-cs="2. Účel webu" data-en="2. Purpose of the website">2. Purpose of the website</h2>
+        <p data-cs="Web představuje značku FIELDPATH, informuje o aplikaci a komunitě a poskytuje kontaktní údaje. Používáním webu souhlasíš s těmito podmínkami." data-en="The website presents the FIELDPATH brand, informs about the app and community, and provides contact details. By using the website you agree to these terms.">
+            The website presents the FIELDPATH brand, informs about the app and community, and provides contact details. By using the website you agree to these terms.
+        </p>
+
+        <h2 data-cs="3. Duševní vlastnictví" data-en="3. Intellectual property">3. Intellectual property</h2>
+        <p data-cs="Obsah webu (texty, grafika, logo, videa) je chráněn. Bez předchozího souhlasu ho nesmíš kopírovat, upravovat ani šířit nad rámec běžného prohlížení." data-en="Website content (texts, graphics, logo, videos) is protected. Without prior permission you may not copy, modify, or distribute it beyond ordinary browsing.">
+            Website content (texts, graphics, logo, videos) is protected. Without prior permission you may not copy, modify, or distribute it beyond ordinary browsing.
+        </p>
+
+        <h2 data-cs="4. Přípustné použití" data-en="4. Acceptable use">4. Acceptable use</h2>
+        <ul>
+            <li data-cs="Web používej jen zákonným způsobem." data-en="Use the website only in a lawful way.">Use the website only in a lawful way.</li>
+            <li data-cs="Nesmíš narušovat provoz webu, pokoušet se o neoprávněný přístup ani zneužívat kontaktní formuláře / e-maily." data-en="You must not disrupt the website, attempt unauthorized access, or abuse contact emails.">You must not disrupt the website, attempt unauthorized access, or abuse contact emails.</li>
+        </ul>
+
+        <h2 data-cs="5. Odkazy třetích stran" data-en="5. Third-party links">5. Third-party links</h2>
+        <p data-cs="Web může odkazovat na App Store, Google Play, sociální sítě nebo YouTube. Za obsah a podmínky těchto služeb odpovídají jejich provozovatelé." data-en="The website may link to the App Store, Google Play, social networks, or YouTube. Those providers are responsible for their own content and terms.">
+            The website may link to the App Store, Google Play, social networks, or YouTube. Those providers are responsible for their own content and terms.
+        </p>
+
+        <h2 data-cs="6. Ochrana osobních údajů" data-en="6. Privacy">6. Privacy</h2>
+        <p>
+            <span data-cs="Zpracování osobních údajů na webu popisují " data-en="Website personal data processing is described in the ">Website personal data processing is described in the </span>
+            <a href="/website_privacy/" data-cs="Zásady ochrany osobních údajů webu" data-en="Website Privacy Policy">Website Privacy Policy</a>.
+        </p>
+
+        <h2 data-cs="7. Aplikace FieldPath" data-en="7. FieldPath app">7. FieldPath app</h2>
+        <p>
+            <span data-cs="Používání mobilní aplikace se řídí samostatnými dokumenty: " data-en="Use of the mobile app is governed by separate documents: ">Use of the mobile app is governed by separate documents: </span>
+            <a href="/terms_of_use/index.html" data-cs="Podmínky použití aplikace" data-en="App Terms of Use">App Terms of Use</a>
+            <span data-cs=" a " data-en=" and "> and </span>
+            <a href="/privacy_policy/index.html" data-cs="Zásady ochrany osobních údajů aplikace" data-en="App Privacy Policy">App Privacy Policy</a>.
+        </p>
+
+        <h2 data-cs="8. Omezení odpovědnosti" data-en="8. Limitation of liability">8. Limitation of liability</h2>
+        <p data-cs="Web poskytujeme „jak je“. Usilujeme o správnost informací, ale negarantujeme nepřetržitou dostupnost ani bezchybnost. V maximálním rozsahu dovoleném právem neodpovídáme za nepřímé škody vzniklé používáním webu." data-en="The website is provided “as is”. We aim for accurate information but do not guarantee uninterrupted availability or freedom from errors. To the fullest extent permitted by law we are not liable for indirect damages arising from use of the website.">
+            The website is provided “as is”. We aim for accurate information but do not guarantee uninterrupted availability or freedom from errors. To the fullest extent permitted by law we are not liable for indirect damages arising from use of the website.
+        </p>
+
+        <h2 data-cs="9. Rozhodné právo" data-en="9. Governing law">9. Governing law</h2>
+        <p data-cs="Tyto podmínky se řídí právem České republiky. Spotřebitelská práva tím nejsou dotčena." data-en="These terms are governed by the laws of the Czech Republic. Mandatory consumer rights remain unaffected.">
+            These terms are governed by the laws of the Czech Republic. Mandatory consumer rights remain unaffected.
+        </p>
+
+        <h2 data-cs="10. Změny" data-en="10. Changes">10. Changes</h2>
+        <p data-cs="Podmínky můžeme aktualizovat zveřejněním nové verze na této stránce." data-en="We may update these terms by posting a new version on this page.">
+            We may update these terms by posting a new version on this page.
+        </p>
+    </article>
+
+    <footer data-cs="Poslední aktualizace: 17. listopadu 2026" data-en="Latest update: November 17, 2026">Latest update: November 17, 2026</footer>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>

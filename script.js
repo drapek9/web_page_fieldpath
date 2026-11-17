@@ -52,6 +52,10 @@ function setLanguage(lang) {
     if (lang === "en") {
         document.querySelector(".why_video")?.pause();
     }
+
+    if (typeof window.syncYouTubeEmbedsFromLang === "function") {
+        window.syncYouTubeEmbedsFromLang();
+    }
 }
 
 function initLanguage() {

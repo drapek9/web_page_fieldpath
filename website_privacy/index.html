@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-cs="Zásady ochrany osobních údajů webu FIELDPATH" data-en="FIELDPATH Website Privacy Policy">FIELDPATH Website Privacy Policy</title>
+    <link rel="canonical" href="https://www.fieldpathapp.com/website_privacy/">
+    <link rel="icon" href="/images/app_logo_rel.png" type="image/x-icon">
+    <style>
+        :root{--bg:#f7f9fb;--card:#ffffff;--accent:#0b5fff;--muted:#6b7280;--text:#0f172a}
+        body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;background:var(--bg);color:var(--text);line-height:1.65;margin:0;padding:32px}
+        .container{max-width:900px;margin:0 auto}
+        .topbar{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap;margin-bottom:12px}
+        .lang_switcher{display:inline-flex;gap:6px}
+        .lang_switcher_btn{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;font-weight:600}
+        .lang_switcher_btn.is_active{background:#0f172a;color:#fff;border-color:#0f172a}
+        .scope{background:#eef6ff;border:1px solid #cfe3ff;color:#0b3b7a;padding:12px 14px;border-radius:10px;margin:12px 0 20px;font-size:14px}
+        article.card{background:var(--card);padding:24px;border-radius:12px;box-shadow:0 4px 16px rgba(15,23,42,0.03)}
+        h1{margin:0;font-size:24px}
+        h2{font-size:18px;margin-top:28px}
+        h3{font-size:15px;margin-top:18px}
+        p,li{margin:8px 0}
+        ul{margin-left:20px}
+        a{color:var(--accent)}
+        footer{margin-top:18px;color:var(--muted);font-size:13px}
+        .back{font-size:14px}
+    </style>
+    <script>
+        (function () {
+            const saved = localStorage.getItem("lang");
+            if (saved === "cs" || saved === "en") {
+                document.documentElement.lang = saved;
+                return;
+            }
+            const browserLangs = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
+            const prefersCzech = browserLangs.some((lang) => {
+                const code = lang.toLowerCase().slice(0, 2);
+                return code === "cs" || code === "sk";
+            });
+            document.documentElement.lang = prefersCzech ? "cs" : "en";
+        })();
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="topbar">
+        <a class="back" href="/" data-cs="← Zpět na web" data-en="← Back to website">← Back to website</a>
+        <div class="lang_switcher" role="group" aria-label="Language">
+            <button type="button" class="lang_switcher_btn" data-lang="cs" aria-pressed="false">CS</button>
+            <button type="button" class="lang_switcher_btn" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+    </div>
+
+    <header>
+        <h1 data-cs="Zásady ochrany osobních údajů webu FIELDPATH" data-en="FIELDPATH Website Privacy Policy">FIELDPATH Website Privacy Policy</h1>
+    </header>
+
+    <p class="scope" data-cs="Tyto zásady platí pouze pro webové stránky fieldpathapp.com (včetně podstránek). Neplatí pro mobilní aplikaci FieldPath — ta má vlastní zásady." data-en="These policies apply only to the fieldpathapp.com website (including subpages). They do not apply to the FieldPath mobile app, which has its own privacy policy.">
+        These policies apply only to the fieldpathapp.com website (including subpages). They do not apply to the FieldPath mobile app, which has its own privacy policy.
+    </p>
+
+    <article class="card">
+        <h2 data-cs="1. Správce" data-en="1. Controller">1. Controller</h2>
+        <p data-cs="Správci osobních údajů jsou Šimon Drápal a Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Česká republika." data-en="The data controllers are Šimon Drápal and Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Czech Republic.">
+            The data controllers are Šimon Drápal and Petr Drahoš, Boženy Němcové 262, Chrast u Chrudimi 53851, Czech Republic.
+        </p>
+        <p data-cs="Kontakt: legal@fieldpathapp.com" data-en="Contact: legal@fieldpathapp.com">Contact: legal@fieldpathapp.com</p>
+
+        <h2 data-cs="2. Jaké údaje zpracováváme" data-en="2. What data we process">2. What data we process</h2>
+        <ul>
+            <li data-cs="Technická data potřebná k provozu webu (např. IP adresa v serverových logách, typ prohlížeče)." data-en="Technical data needed to run the website (for example IP address in server logs, browser type).">Technical data needed to run the website (for example IP address in server logs, browser type).</li>
+            <li data-cs="Analytická data o používání webu (Firebase Analytics), pokud dáš souhlas — např. zobrazení stránek a kliknutí." data-en="Analytics data about website use (Firebase Analytics), if you consent — for example page views and clicks.">Analytics data about website use (Firebase Analytics), if you consent — for example page views and clicks.</li>
+            <li data-cs="Data související s YouTube embedy, pokud dáš souhlas s jejich načtením." data-en="Data related to YouTube embeds, if you consent to loading them.">Data related to YouTube embeds, if you consent to loading them.</li>
+            <li data-cs="Obsah e-mailu a kontaktní údaje, které nám dobrovolně napíšeš na support@fieldpathapp.com nebo business@fieldpathapp.com." data-en="Email content and contact details you voluntarily send to support@fieldpathapp.com or business@fieldpathapp.com.">Email content and contact details you voluntarily send to support@fieldpathapp.com or business@fieldpathapp.com.</li>
+        </ul>
+
+        <h2 data-cs="3. Účely a právní základy" data-en="3. Purposes and legal bases">3. Purposes and legal bases</h2>
+        <ul>
+            <li data-cs="Provoz a zabezpečení webu — oprávněný zájem (čl. 6 odst. 1 písm. f GDPR)." data-en="Operating and securing the website — legitimate interest (GDPR Art. 6(1)(f)).">Operating and securing the website — legitimate interest (GDPR Art. 6(1)(f)).</li>
+            <li data-cs="Analytika a YouTube embedy — souhlas (čl. 6 odst. 1 písm. a GDPR). Souhlas můžeš kdykoli odvolat v nastavení cookies." data-en="Analytics and YouTube embeds — consent (GDPR Art. 6(1)(a)). You can withdraw consent anytime in cookie settings.">Analytics and YouTube embeds — consent (GDPR Art. 6(1)(a)). You can withdraw consent anytime in cookie settings.</li>
+            <li data-cs="Odpovědi na zprávy — plnění smlouvy / předkontraktační kroky nebo oprávněný zájem podle kontextu." data-en="Replying to messages — contract performance / pre-contract steps or legitimate interest, depending on context.">Replying to messages — contract performance / pre-contract steps or legitimate interest, depending on context.</li>
+        </ul>
+
+        <h2 data-cs="4. Cookies a trackery" data-en="4. Cookies and trackers">4. Cookies and trackers</h2>
+        <p data-cs="Nezbytné uložení preferencí (jazyk, volba cookies) používáme k fungování webu. Firebase Analytics a YouTube se spouští jen po souhlasu „Přijmout“." data-en="Essential preference storage (language, cookie choice) is used to run the website. Firebase Analytics and YouTube run only after you choose Accept.">
+            Essential preference storage (language, cookie choice) is used to run the website. Firebase Analytics and YouTube run only after you choose Accept.
+        </p>
+        <p data-cs="Nastavení cookies můžeš změnit odkazem „Nastavení cookies“ v patičce webu." data-en="You can change cookie settings via the Cookie settings link in the website footer.">
+            You can change cookie settings via the Cookie settings link in the website footer.
+        </p>
+
+        <h2 data-cs="5. Příjemci a přenosy" data-en="5. Recipients and transfers">5. Recipients and transfers</h2>
+        <p data-cs="Podle zvolených služeb mohou být údaje zpracovávány poskytovateli: Google (Firebase Analytics, YouTube), hosting webu. Tito poskytovatelé mohou zpracovávat data i mimo EHP; v takovém případě používají vhodné záruky (např. standardní smluvní doložky)." data-en="Depending on selected services, data may be processed by providers: Google (Firebase Analytics, YouTube), website hosting. These providers may process data outside the EEA; where they do, appropriate safeguards are used (for example Standard Contractual Clauses).">
+            Depending on selected services, data may be processed by providers: Google (Firebase Analytics, YouTube), website hosting. These providers may process data outside the EEA; where they do, appropriate safeguards are used (for example Standard Contractual Clauses).
+        </p>
+
+        <h2 data-cs="6. Doba uchování" data-en="6. Retention">6. Retention</h2>
+        <ul>
+            <li data-cs="Serverové logy: po dobu potřebnou k provozu a bezpečnosti, obvykle do několika týdnů až měsíců." data-en="Server logs: for as long as needed for operation and security, typically weeks to months.">Server logs: for as long as needed for operation and security, typically weeks to months.</li>
+            <li data-cs="Analytika: podle nastavení Firebase / Google Analytics a doby platnosti souhlasu." data-en="Analytics: according to Firebase / Google Analytics settings and the validity of your consent.">Analytics: according to Firebase / Google Analytics settings and the validity of your consent.</li>
+            <li data-cs="E-mailová komunikace: po dobu vyřízení a případné navazující evidence (např. obchodní poptávka)." data-en="Email communication: for as long as needed to handle the request and any related follow-up.">Email communication: for as long as needed to handle the request and any related follow-up.</li>
+        </ul>
+
+        <h2 data-cs="7. Tvá práva" data-en="7. Your rights">7. Your rights</h2>
+        <p data-cs="Máš právo na přístup, opravu, výmaz, omezení zpracování, přenositelnost, námitku a odvolání souhlasu. Stížnost můžeš podat u Úřadu pro ochranu osobních údajů (uoou.cz)." data-en="You have the right of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. You may lodge a complaint with the Czech Data Protection Authority (uoou.cz).">
+            You have the right of access, rectification, erasure, restriction, portability, objection, and withdrawal of consent. You may lodge a complaint with the Czech Data Protection Authority (uoou.cz).
+        </p>
+        <p data-cs="Práva uplatníš na legal@fieldpathapp.com." data-en="Exercise your rights at legal@fieldpathapp.com.">Exercise your rights at legal@fieldpathapp.com.</p>
+
+        <h2 data-cs="8. Aplikace FieldPath" data-en="8. FieldPath app">8. FieldPath app</h2>
+        <p>
+            <span data-cs="Ochrana údajů v mobilní aplikaci je popsána samostatně: " data-en="Privacy for the mobile app is described separately: ">Privacy for the mobile app is described separately: </span>
+            <a href="/privacy_policy/index.html" data-cs="Zásady ochrany osobních údajů aplikace" data-en="App Privacy Policy">App Privacy Policy</a>.
+        </p>
+
+        <h2 data-cs="9. Změny" data-en="9. Changes">9. Changes</h2>
+        <p data-cs="Tyto zásady můžeme aktualizovat. Aktuální verze je vždy na této stránce." data-en="We may update these policies. The current version is always on this page.">
+            We may update these policies. The current version is always on this page.
+        </p>
+    </article>
+
+    <footer data-cs="Poslední aktualizace: 17. listopadu 2026" data-en="Latest update: November 17, 2026">Latest update: November 17, 2026</footer>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>
